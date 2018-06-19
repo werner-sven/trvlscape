@@ -45,16 +45,32 @@
 
 .card-booking-process {
 
-  .index-number {
+  height: 50vh;
+  border: 0.25px solid lightgray;
+  margin-top: 20%;
+  margin-bottom: 40%;
+  background-color: white;
+  box-shadow: 4px 4px 5px #888;
+  position: relative;
 
+  .index-number {
+    color: black;
+    position: absolute;
+    top: -14%;
+    left: 3%;
   }
 
   .heading {
-
+    color: black;
+    position: absolute;
+    top: -7%;
+    left: 11%;
   }
 
   .button-form--next {
-
+    position: absolute;
+    bottom: -6%;
+    left: 40%;
   }
 }
 
