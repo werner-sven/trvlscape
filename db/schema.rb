@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_19_103051) do
+ActiveRecord::Schema.define(version: 2018_06_19_123722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,8 +93,15 @@ ActiveRecord::Schema.define(version: 2018_06_19_103051) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "phone"
+    t.string "credit_card_owner"
+    t.string "credit_card_nr"
+    t.string "csv"
+    t.date "expiry_date"
+    t.bigint "traveller_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["traveller_id"], name: "index_users_on_traveller_id"
   end
 
   add_foreign_key "bookings", "packages"
@@ -103,4 +110,5 @@ ActiveRecord::Schema.define(version: 2018_06_19_103051) do
   add_foreign_key "package_origins", "origins"
   add_foreign_key "package_origins", "packages"
   add_foreign_key "travellers", "bookings"
+  add_foreign_key "users", "travellers"
 end
