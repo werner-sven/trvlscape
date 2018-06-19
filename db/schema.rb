@@ -10,10 +10,75 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_19_090823) do
+ActiveRecord::Schema.define(version: 2018_06_19_103051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.string "status"
+    t.string "origin"
+    t.integer "budget_pp"
+    t.string "excluded_countries"
+    t.bigint "package_id"
+    t.bigint "user_id"
+    t.string "climate"
+    t.bigint "type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["package_id"], name: "index_bookings_on_package_id"
+    t.index ["type_id"], name: "index_bookings_on_type_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "origins", force: :cascade do |t|
+    t.string "city"
+    t.string "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "package_origins", force: :cascade do |t|
+    t.bigint "package_id"
+    t.bigint "origin_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["origin_id"], name: "index_package_origins_on_origin_id"
+    t.index ["package_id"], name: "index_package_origins_on_package_id"
+  end
+
+  create_table "packages", force: :cascade do |t|
+    t.string "city"
+    t.string "country"
+    t.string "climate"
+    t.integer "price"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "flight_departure_time"
+    t.string "accommodation_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "travellers", force: :cascade do |t|
+    t.string "passport_number"
+    t.date "passport_expiration"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "title"
+    t.string "nationality"
+    t.date "birth_date"
+    t.bigint "booking_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_travellers_on_booking_id"
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,4 +97,10 @@ ActiveRecord::Schema.define(version: 2018_06_19_090823) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "packages"
+  add_foreign_key "bookings", "types"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "package_origins", "origins"
+  add_foreign_key "package_origins", "packages"
+  add_foreign_key "travellers", "bookings"
 end
