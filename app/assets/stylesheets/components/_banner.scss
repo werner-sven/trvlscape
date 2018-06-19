@@ -9,17 +9,34 @@
 
 .banner-landing-page {
   height: 100vh;
+  background-image: image-url("Banner_backpack_orange.jpg");
+
+  .banner-text {
+    position: relative;
+    top: 30%;
+    left: 5%;
+  }
 
   h1 {
+    font-weight: 900;
+    font-size: 95px;
+    margin-top: 5px;
+    margin-bottom: 0;
 
   }
 
   h2 {
-
+    font-weight: 900;
+    font-size: 70px;
+    margin-top: 5px;
+    margin-bottom: 0;
   }
 
   .banner-input-field {
-
+    border-bottom: 25px solid $orange;
+    padding-bottom: 0px;
+    margin-bottom:-5px;
+    line-height: 0px;
   }
 }
 
