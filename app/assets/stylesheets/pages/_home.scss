@@ -1,1 +1,37 @@
 // Specific CSS for your home-page
+
+.hiw{
+
+  color: $gray;
+
+  h2 {
+    font-weight: 800;
+    font-size: 70px;
+    margin-bottom:0;
+    margin-top: 95px;
+  }
+
+  h3 {
+    margin-top: 10px;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    }
+
+  .hiw-orange {
+    color: $orange;
+    font-weight: 900;
+  }
+
+  #hiw-destination-unknown {
+    background-image: image-url("destination_unknown_hiw_cockpit.jpg");
+    height: 270px;
+    width: 350px;
+    background-size: cover;
+
+  }
+
+  #hiw-destination-unknown-number {
+   color: $light-blue;
+  }
+}

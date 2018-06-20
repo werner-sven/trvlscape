@@ -9,11 +9,15 @@
   }
 
   .index-number {
-
+    position: relative;
+    z-index: 1;
   }
 
   .card-image {
-
+    position: absolute;
+    top: 34px;
+    left: 84px;;
+    z-index: -1;
   }
 }
 
@@ -24,11 +28,13 @@
   }
 
   .index-number {
-
+    position: absolute;
+    top: -27px;
+    left: -81px;
   }
 
   .card-image {
-
+    position: relative;
   }
 }
 
