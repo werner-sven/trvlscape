@@ -1,19 +1,19 @@
 
 <!-- banner here -->
+<%= form_for @booking do |f| %>
 
-<%= render '/shared/index_cards_booking/first_card' %>
-<%= render '/shared/index_cards_booking/first_card' %>
-<%= render '/shared/index_cards_booking/first_card' %>
-<%= render '/shared/index_cards_booking/first_card' %>
-<%= render '/shared/index_cards_booking/first_card' %>
-<%= render '/shared/index_cards_booking/first_card' %>
-<%= render '/shared/index_cards_booking/first_card' %>
+  <%= render '/shared/index_cards_booking/first_card', f: f %>
 
-<hr>
+  <%= f.submit class: 'btn btn-primary'%>
+
+<% end %>
+
+
+<!-- <hr>
 
  <%= link_to "Review your input", bookings_path(@booking), method: :post, class: "btn btn-primary btn-lg" %>
 
   <%= link_to "Back to Home", root_path, class: "btn btn-primary btn-lg" %>
 
-
+ -->
 
