@@ -5,7 +5,6 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @nr_traveller = 1
     @types = Type.all
 
     @user = current_user
@@ -17,6 +16,9 @@ class BookingsController < ApplicationController
     # add all params for booking
 
     @booking = Booking.new(booking_params)
+    @booking.number_traveller.times do
+      @booking.new_traveller
+    end
     # loop through number of travellers from bookings param and add new traveller
     # @booking.new_traveller
     @booking.user = current_user
@@ -32,14 +34,12 @@ class BookingsController < ApplicationController
     # update params for update when form exists
     @booking.update(user: @current_user)
     raise
-    redirect_to booking_path(@booking)
   end
 
   def show
   end
 
   def traveller
-    @booking
   end
 
   private
