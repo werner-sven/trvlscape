@@ -5,17 +5,20 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @traveller = Traveller.new
+    @nr_traveller = 1
     @types = Type.all
+
     @user = current_user
   end
 
   def create
     # update params for create when form exists
     # creating a new booking
-    @booking = Booking.new
-    @booking.new_traveller
+    # add all params for booking
 
+    @booking = Booking.new(booking_params)
+    # loop through number of travellers from bookings param and add new traveller
+    # @booking.new_traveller
     @booking.user = current_user
     @booking.save
 
@@ -39,8 +42,10 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-  # def booking_params
-  #   params.require(:booking).permit()
-  # end
+  # set params for booking
+
+  def booking_params
+    params.require(:booking).permit(:origin, :number_traveller)
+  end
 
 end

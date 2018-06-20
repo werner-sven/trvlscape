@@ -7,13 +7,13 @@ class Booking < ApplicationRecord
 
   # after_create :new_traveller
 
-  def new_traveller
-    traveller = Traveller.new
-    traveller.booking = self.id
-    traveller.save!
-  end
+  # def new_traveller
+  #   traveller = Traveller.new
+  #   traveller.booking = self.id
+  #   traveller.save!
+  # end
 
-  def delete_traveller
-    self.traveller.last.destroy
-  end
+  # def delete_traveller
+  #   self.traveller.last.destroy
+  # end
 end
