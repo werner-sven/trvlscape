@@ -10,6 +10,8 @@
   // height: 100vh;
 }
 
+
+
 .radio-trip-type-group {
   display: flex;
   flex-wrap: wrap;
@@ -76,4 +78,17 @@
       }
     }
   }
+
+  .radio-button-departure-time {
+    height: 40px;
+    width: 70px;
+    font-size: 14px;
+
+    label {
+      margin-bottom: 0px;
+    }
+
+  }
 }
+
+
