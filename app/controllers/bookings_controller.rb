@@ -5,12 +5,17 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @traveller = Traveller.new
+    @types = Type.all
     @user = current_user
   end
 
   def create
     # update params for create when form exists
+    # creating a new booking
     @booking = Booking.new
+    @booking.new_traveller
+
     @booking.user = current_user
     @booking.save
 

@@ -1,10 +1,11 @@
 
 <!-- banner here -->
-<%= form_for @booking do |f| %>
+<%= form_for @booking do |b| %>
 
-  <%= render '/shared/index_cards_booking/first_card', f: f %>
+  <%= render '/shared/index_cards_booking/second_card', b: b %>
+  <%= render '/shared/index_cards_booking/third_card', b: b %>
 
-  <%= f.submit class: 'btn btn-primary'%>
+  <%= b.submit class: 'btn btn-primary'%>
 
 <% end %>
 
