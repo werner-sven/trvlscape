@@ -2,14 +2,21 @@
   <div class="base-container--bookings">
     <div class="card-booking-process">
       <div class="index-number index-number-booking-new">
-        <h1>2</h1>
+        <h1>6</h1>
       </div>
       <div class="heading index-number-booking-new">
-        <h2>Origin</h2>
+        <h2>Personal Details</h2>
       </div>
 
       <div class="content-container">
-        <input type="text" name="booking[origin]" value="Your origin">
+        <%= b.fields_for :travellers do |t| %>
+          <div>
+            <%= t.label :first_name %>
+            <%= t.text_field :first_name %>
+            <%= t.label :last_name %>
+            <%= t.text_field :last_name %>
+          </div>
+        <% end %>
       </div>
 
       <button class="button-form button-form--next index-number-booking-new"> Next </button>
