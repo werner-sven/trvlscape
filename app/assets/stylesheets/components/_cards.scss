@@ -34,12 +34,85 @@
 
 // Cards Testimonials
 
-.card-testimonial {
+.card-testimonial{
+  position: relative;
+  overflow: hidden;
+  margin-top:40%;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  transition: transform .2s;
 
-  &:hover {
+
+
+
+
+
+  .card-testimonial--yellow:hover & {
+      background-color: rgba(150, 200, 30, 1);
+      text-align:center;
+      color:white;
+
+
 
   }
+
+  .card-testimonial--red:hover & {
+      background-color: red;
+      text-align:center;
+      color:white;
+
+  }
+
+  .card-testimonial--blue:hover & {
+    background-color:blue;
+    text-align:center;
+    color:white;
+
+  }
+  }
+
+
+
+.card-description{
+  width: 400px;
+  height: 400px;
+  align-items:center;
+  justify-content:center;
+  font-size:0px;
+  color: grey;
+
 }
+
+.card-description:hover{
+  font-size:20px;
+  color:black;
+  background-color:yellow;
+  height: 485px;
+  weight: 400px;
+}
+
+.card-description:hover:after{
+  content: attr(data-hover);
+  font-size: 24px;
+  height: 100%;
+  weight: 100%;
+  color:black;
+  }
+
+
+
+
+
+
+.imagetest {
+  margin-bottom: display;
+  align-item:center;
+
+}
+
+
+
 
 // Cards Booking Process
 
