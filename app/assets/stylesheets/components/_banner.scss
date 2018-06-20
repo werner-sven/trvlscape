@@ -32,13 +32,48 @@
     margin-bottom: 0;
   }
 
+  .banner-input-field-outside {
+    margin-top: 20px;
+    min-width: 100px;
+    max-width: 400px;
+    display: inline-block;
+  }
+
   .banner-input-field {
-    border-bottom: 25px solid $orange;
-    padding-bottom: 0px;
-    margin-bottom:-5px;
-    line-height: 0px;
+   position: relative;
+   padding: 5px 10px;
+   z-index: 9;
+   margin: 0 -10px;
+
+    &:before {
+    content: "";
+    position: absolute;
+    width: 102%;
+    left: 0px;
+    bottom: 18px;
+    z-index: -1;
+    height: 25px;
+    background-color: $orange;
+    }
+  }
+
+  .banner-input-field--same-line-text {
+    display: inline-block;
+    margin-left: 25px;
+  }
+
+  .make-inline {
+    display: inline-block;
+  }
+
+  .banner-submit-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
+
+//Other Banners
 
 .banner-booking-form {
 
