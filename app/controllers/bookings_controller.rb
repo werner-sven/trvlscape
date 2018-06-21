@@ -1,11 +1,10 @@
 class BookingsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create]
-  before_action :set_booking, only: [:show, :edit, :update]
+  before_action :set_booking, only: [:show, :edit, :update, :traveller]
   # before_action :booking_params, only: [:create, :update]
 
   def new
     @booking = Booking.new
-    @nr_traveller = 1
     @types = Type.all
 
     @user = current_user
@@ -17,12 +16,15 @@ class BookingsController < ApplicationController
     # add all params for booking
 
     @booking = Booking.new(booking_params)
+    @booking.number_traveller.times do
+      @booking.new_traveller
+    end
     # loop through number of travellers from bookings param and add new traveller
     # @booking.new_traveller
     @booking.user = current_user
     @booking.save
 
-    redirect_to booking_path(@booking)
+    redirect_to traveller_booking_path(@booking)
   end
 
   def edit
@@ -30,11 +32,14 @@ class BookingsController < ApplicationController
 
   def update
     # update params for update when form exists
-    @booking.update(user: @current_user )
-    redirect_to booking_path(@booking)
+    @booking.update(user: @current_user)
+    raise
   end
 
   def show
+  end
+
+  def traveller
   end
 
   private
@@ -45,7 +50,7 @@ class BookingsController < ApplicationController
   # set params for booking
 
   def booking_params
-    params.require(:booking).permit(:origin, :number_traveller)
+    params.require(:booking).permit(:origin, :number_traveller, :type_id)
   end
 
 end

@@ -7,20 +7,42 @@
       <div class="heading index-number-booking-new">
         <h2>Personal Details</h2>
       </div>
-
       <div class="content-container">
-        <%= b.fields_for :travellers do |t| %>
-          <div>
-            <%= t.label :first_name %>
-            <%= t.text_field :first_name %>
-            <%= t.label :last_name %>
-            <%= t.text_field :last_name %>
+
+        <div class="booking-step6-personal">
+          <div class="booking-step6-personal-img">
           </div>
-        <% end %>
+
+          <div class="booking-step6-personal-content">
+
+            <div class="booking-step6-personal-header">
+             <h3>Traveller 1</h3>
+           </div>
+           <div class="booking-step6-personal-form">
+             <div class="booking-step6-personal-form-leftcol">
+              <input id="title" type="text" name="traveller_1[title]" placeholder="Mr.">
+              <input id="first_name"type="text" name="traveller_1[first_name]" placeholder="First Name">
+              <input type="text" name="traveller_1[passport_number]" placeholder="Passport Number" ">
+              <input type="text" name="traveller_1[nationality]" placeholder="Nationality">
+            </div>
+            <div class="booking-step6-personal-form-rightcol">
+              <input type="text" name="traveller_1[last_name]" placeholder="Last Name">
+              <input type="text" name="traveller_1[passport_expiration]" placeholder="Passport Expiration">
+              <input type="text" name="traveller_1[birth_date]" placeholder="Birth date">
+            </div>
+          </div>
+        </div>
       </div>
-
-      <button class="button-form button-form--next index-number-booking-new"> Next </button>
-
+  <input class="button-form button-form--next index-number-booking-new" type="submit" value="Pay">
     </div>
+
+
+
+
   </div>
+
+
+  <!--  <button class="button-form button-form--next index-number-booking-new"> Next </button> -->
+
 </div>
+

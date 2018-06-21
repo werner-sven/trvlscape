@@ -1,0 +1,94 @@
+.radio-container {
+  display: flex;
+  justify-content: center;
+}
+
+.type-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+}
+
+
+
+.radio-trip-type-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .input-container {
+    position: relative;
+    height: 80px;
+    width: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    .radio-button {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .radio-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $orange;
+      border-radius: 5px;
+      padding: 1rem;
+      transition: transform 300ms ease;
+    }
+    .icon svg {
+      fill: $orange;
+      width: 30px;
+      height: 30px;
+    }
+    .ratio-title-label {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $orange;
+    }
+
+    .radio-button:checked + .radio-title {
+      background-color: $orange;
+      border: 2px solid $orange;
+      color: white;
+      transform: scale(1.1, 1.1);
+
+      .icon svg {
+        fill: white;
+        background-color: $orange;
+      }
+
+      .radio-title-label {
+        color: white;
+        background-color: $orange;
+      }
+    }
+  }
+
+  .radio-button-departure-time {
+    height: 40px;
+    width: 70px;
+    font-size: 14px;
+
+    label {
+      margin-bottom: 0px;
+    }
+
+  }
+}
+
+
