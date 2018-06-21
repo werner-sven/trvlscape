@@ -31,7 +31,11 @@
 
   }
 
-  #hiw-destination-unknown-number {
-   color: $light-blue;
+  #hiw-trip {
+    background-image: image-url("hiw_enjoy_trip_couple_city.jpg");
+    height: 270px;
+    width: 350px;
+    background-size: cover;
+
   }
 }

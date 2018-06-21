@@ -2,10 +2,10 @@
 
 // Cards How to Landing page
 
-.card-how-to--left {
+.card-how-to--left-top {
 
   .card-text {
-  height: 270px;
+  height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,6 +14,16 @@
   .index-number {
     position: relative;
     z-index: 1;
+    height: 340px;
+
+    h5 {
+      position: absolute;
+      color: $light-blue;
+      top: 38px;
+      left: 5px;
+      font-weight: 700;
+      font-size: 240px;
+    }
   }
 
   .card-image {
@@ -23,6 +33,39 @@
     z-index: -1;
   }
 }
+
+.card-how-to--left-bottom {
+
+  .card-text {
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .index-number {
+    position: relative;
+    z-index: 1;
+    height: 340px;
+
+    h5 {
+      position: absolute;
+      color: $orange;
+      top: 38px;
+      left: 5px;
+      font-weight: 700;
+      font-size: 240px;
+    }
+  }
+
+  .card-image {
+    position: absolute;
+    top: 34px;
+    left: 84px;;
+    z-index: -1;
+  }
+}
+
 
 .card-how-to--right {
 
