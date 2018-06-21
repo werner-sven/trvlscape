@@ -1,10 +1,12 @@
 <h1>Show page of a booking</h1>
 
-<p>this later has two different show pages depending on the status of the booking</p>
 
 
+<%=@booking.number_traveller  %>
+<% @booking.travellers.each do |traveller|  %>
+<p> Name: <%= traveller.first_name  %> <%= traveller.last_name  %> </p>
+<p>Passport-num:  <%= traveller.passport_number  %></p>
+<% end %>
 
-
-  <%= link_to "Edit input", edit_booking_path(@booking), class: "btn btn-primary btn-lg" %>
-
-  <%= link_to "Back to Home", root_path, class: "btn btn-primary btn-lg" %>
+  <%= link_to "Edit booking details", edit_booking_path(@booking), class: "btn btn-primary btn-lg" %>
+  <%= link_to "Edit Traveller details", traveller_booking_path(@booking), class: "btn btn-primary btn-lg" %>
