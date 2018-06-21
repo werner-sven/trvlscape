@@ -1,1 +1,55 @@
 // Specific CSS for your home-page
+
+.hiw{
+
+  color: $gray;
+
+  h2 {
+    font-weight: 800;
+    font-size: 70px;
+    margin-bottom:0;
+    margin-top: 95px;
+    padding-left: 80px;
+  }
+
+  h3 {
+    margin-top: 10px;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    padding-left: 80px;
+    }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .hiw-orange {
+    color: $orange;
+    font-weight: 900;
+  }
+
+  #hiw-destination-unknown {
+    background-image: image-url("destination_unknown_hiw_cockpit.jpg");
+    height: 270px;
+    width: 350px;
+    background-size: cover;
+
+  }
+
+  #hiw-trip {
+    background-image: image-url("hiw_enjoy_trip_couple_city.jpg");
+    height: 270px;
+    width: 350px;
+    background-size: cover;
+
+  }
+
+  #hiw-relax {
+    background-image: image-url("hiw_relax_we_book.jpg");
+    height: 270px;
+    width: 350px;
+    background-size: cover;
+
+  }
+}
