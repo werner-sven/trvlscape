@@ -118,6 +118,7 @@ margin-top: 12vh;
   transition: transform .2s;
   font-size:20px;
   font-color: red;
+  height:90px;
   }
 
 
@@ -135,6 +136,7 @@ margin-top: 12vh;
   color: #FFFFFF;
   transition: transform .2s;
   }
+
 .card-description--yellow:hover{
   font-size:20px;
   color:white;
@@ -173,12 +175,15 @@ margin-top: 12vh;
   top:100px;
   }
 
+
+
 .card-description--yellow:hover:after{
   content: attr(data-hover);
   font-size: 18px;
   weight: 90%;
   color:white;
   padding-left: 13px;
+  height: 500px;
 
   }
 
@@ -194,6 +199,15 @@ margin-top: 12vh;
    color: #FFFFFF;
 }
 
+.card-description--yellow{
+  height:500px;
+}
+.card-description--blue{
+  height:500px;
+}
+.card-description--red{
+  height:500px;
+}
   }
   .card-description--yellow:hover:after {
   content: attr(data-hover);
@@ -201,6 +215,7 @@ margin-top: 12vh;
   weight: 90%;
   color:white;
   padding-left: 13px;
+
 
   }
 
