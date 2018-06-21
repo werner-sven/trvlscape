@@ -9,7 +9,13 @@
       </div>
 
       <div class="content-container">
-        <input type="text" name="booking[origin]" value="Your origin">
+
+        <div class="slidecontainer padding-right-10 padding-left-10 form-grouped">
+          <label class="slider-output" for="max-price">Budget per person: 300</label>
+          <input name="max-price" type="range" min="150" max="1000" value="300" class="slider" id="myRange">
+        </div>
+
+
       </div>
 
       <button class="button-form button-form--next index-number-booking-new"> Next </button>
