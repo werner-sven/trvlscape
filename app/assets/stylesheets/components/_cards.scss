@@ -440,6 +440,57 @@ margin-top: 12vh;
 
 }
 
+// fifth card booking new
+.grid-budget {
+  display: grid;
+  grid-template-rows: 1fr 2fr 50%;
+  grid-template-columns: 35% 65%;
+}
+
+.grid-content-left-budget {
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-budget-header {
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  span {
+    font-size: 24px;
+    font-weight: 700;
+    padding-left: 0%;
+  }
+}
+
+.grid-budget-slider {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+  // display: flex;
+  justify-content: left;
+  align-items: center;
+
+  span {
+    font-size: 24px;
+    font-weight: 700;
+    padding-left: 15%;
+  }
+}
+
+.grid-budget-accommodation {
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
+  display: flex;
+  justify: space-between;
+  align-items: center;
+}
+
 //second booking new
 .traveller_origin {
   padding-left: 7%;
