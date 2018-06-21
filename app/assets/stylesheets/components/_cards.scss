@@ -2,33 +2,106 @@
 
 // Cards How to Landing page
 
-.card-how-to--left {
+.card-how-to--left-top {
+
+margin-top: 12vh;
 
   .card-text {
-
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 107px;
   }
 
   .index-number {
+    position: relative;
+    z-index: 1;
+    height: 340px;
 
+    h5 {
+      position: absolute;
+      color: $light-blue;
+      top: 38px;
+      left: 5px;
+      font-weight: 700;
+      font-size: 240px;
+    }
   }
 
   .card-image {
-
+    position: absolute;
+    top: 34px;
+    left: 84px;;
+    z-index: -1;
   }
 }
+
+.card-how-to--left-bottom {
+
+  .card-text {
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 108px;
+  }
+
+  .index-number {
+    position: relative;
+    z-index: 1;
+    height: 340px;
+
+    h5 {
+      position: absolute;
+      color: $orange;
+      top: 38px;
+      left: 5px;
+      font-weight: 700;
+      font-size: 240px;
+    }
+  }
+
+  .card-image {
+    position: absolute;
+    top: 34px;
+    left: 84px;;
+    z-index: -1;
+  }
+}
+
 
 .card-how-to--right {
 
   .card-text {
-
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 16px;
+  padding-left: 90px;
   }
 
   .index-number {
+    position: relative;
+    z-index: 1;
+    height: 340px;
 
+    h5 {
+      position: absolute;
+      color: $purple;
+      top: 38px;
+      left: 303px;
+      font-weight: 700;
+      font-size: 240px;
+    }
   }
 
   .card-image {
-
+    position: absolute;
+    top: 34px;
+    left: 6px;
+    z-index: -1;
   }
 }
 
