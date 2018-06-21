@@ -1,6 +1,10 @@
 <h1>Show page of a booking</h1>
 
-
+<h2>Your Booking</h2>
+<p>Type of Travel: <%=@booking.type.name  %></p>
+<p>Depature: <%=@booking.start_date %></p>
+<p>Depaturing after: <%= @booking.start_time.strftime('%H')  %>pm</p>
+<p>Your Destination will be: <%=@booking.climate  %></p>
 
 <%=@booking.number_traveller  %>
 <% @booking.travellers.each do |traveller|  %>

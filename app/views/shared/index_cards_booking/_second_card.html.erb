@@ -16,7 +16,7 @@
               <h3>Start your Trip from</h3>
             </div>
             <div class="col-xs-12 col-md-7">
-              <input type="text" name="booking[origin]" placeholder="Your Origin" class="input-field-booking-origin">
+              <input type="text" name="booking[origin]" value="<%=params[:city]%>" placeholder="e.g. Barcelona" class="input-field-booking-origin">
             </div>
           </div>
 
@@ -29,7 +29,7 @@
               <h3>Departure Date</h3>
             </div>
             <div class="col-xs-12 col-md-7">
-              <input type="date" name="booking[origin]" value="Your origin" class="input-field-booking-date">
+              <input type="date" name="booking[start_date]" class="input-field-booking-date">
             </div>
           </div>
 
@@ -47,7 +47,7 @@
                     <div class="type-container">
                       <div class="radio-trip-type-group">
                         <div class="input-container radio-button-departure-time">
-                          <input type="radio" name="booking[start_time]" class="radio-button" value="1">
+                          <input type="radio" name="booking[start_time]" class="radio-button" value="9">
                           <div class="radio-title">
                             <label for="departure_time" class="radio-title-label">9 AM</label>
                           </div>
@@ -57,7 +57,7 @@
                     <div class="type-container">
                       <div class="radio-trip-type-group">
                         <div class="input-container radio-button-departure-time">
-                          <input type="radio" name="booking[start_time]" class="radio-button" value="2">
+                          <input type="radio" name="booking[start_time]" class="radio-button" value="12">
                           <div class="radio-title">
                             <label for="departure_time" class="radio-title-label">12 AM</label>
                           </div>
@@ -67,7 +67,7 @@
                     <div class="type-container">
                       <div class="radio-trip-type-group">
                         <div class="input-container radio-button-departure-time">
-                          <input type="radio" name="booking[start_time]" class="radio-button" value="3">
+                          <input type="radio" name="booking[start_time]" class="radio-button" value="15">
                           <div class="radio-title">
                             <label for="departure_time" class="radio-title-label">3 PM</label>
                           </div>
@@ -77,7 +77,7 @@
                     <div class="type-container">
                       <div class="radio-trip-type-group">
                         <div class="input-container radio-button-departure-time">
-                          <input type="radio" name="booking[start_time]" class="radio-button" value="4">
+                          <input type="radio" name="booking[start_time]" class="radio-button" value="18">
                           <div class="radio-title">
                             <label for="departure_time" class="radio-title-label">6 PM</label>
                           </div>
