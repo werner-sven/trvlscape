@@ -2,7 +2,5 @@
   <input type="hidden" name="_method" value="patch">
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
-  <% @booking.number_traveller.times do |i| %>
-    <%= render '/shared/update_cards_booking/personal_details', number: (i) %>
-  <% end %>
+    <%= render '/shared/update_cards_booking/personal_details' %>
 </form>

@@ -1,0 +1,21 @@
+<div class="booking-step6-personal-header">
+  <h3>Traveller <%= (i + 1)  %></h3>
+</div>
+<div class="booking-step6-personal-form">
+ <div class="booking-step6-personal-form-leftcol">
+
+  <input id="title" type="text" value="<%=@booking.travellers[i].title %>" name="traveller_<%= i %>[title]" placeholder="">
+
+  <input id="first_name"type="text" name='traveller_<%=i%>[first_name]' placeholder="First Name">
+
+  <input id="" type="text" name='traveller_<%=i%>[passport_i]' placeholder="Passport i" ">
+  <label for="passport_expiration">Passport expiry date</label>
+  <input id="passport_expiration" type="date" name='traveller_<%=i%>[passport_expiration]' placeholder="Passport Expiration">
+</div>
+<div class="booking-step6-personal-form-rightcol">
+  <input type="text" name='traveller_<%=i%>[last_name]' placeholder="Last Name">
+  <input type="text" name='traveller_<%=i%>[nationality]' placeholder="Nationality">
+  <label for="birth_date">Birth date</label>
+  <input id="birth_date" type="date" name='traveller_<%=i%>[birth_date]' placeholder="Birth date">
+</div>
+</div>

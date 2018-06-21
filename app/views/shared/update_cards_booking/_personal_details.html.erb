@@ -14,37 +14,58 @@
           </div>
 
           <div class="booking-step6-personal-content">
-<!--
-        Include smart way for form that it prefills a 'value' if that input exists in database, otherwise display placeholder -->
 
-            <div class="booking-step6-personal-header">
-             <h3>Traveller <%= (number + 1)  %></h3>
-           </div>
-           <div class="booking-step6-personal-form">
-             <div class="booking-step6-personal-form-leftcol">
-              <input id="title" type="text" value="<%=@booking.travellers[number].title.class %>" name="traveller_<%= number %>[title]" placeholder="">
-              <input id="first_name"type="text" name='traveller_<%=number%>[first_name]' placeholder="First Name">
-              <input type="text" name='traveller_<%=number%>[passport_number]' placeholder="Passport Number" ">
-              <input type="text" name='traveller_<%=number%>[nationality]' placeholder="Nationality">
-            </div>
-            <div class="booking-step6-personal-form-rightcol">
-              <input type="text" name='traveller_<%=number%>[last_name]' placeholder="Last Name">
-              <input type="text" name='traveller_<%=number%>[passport_expiration]' placeholder="Passport Expiration">
-              <input type="text" name='traveller_<%=number%>[birth_date]' placeholder="Birth date">
+            <div id="carousel-example" class="carousel slide" data-interval="false">
+              <ol class="carousel-indicators">
+                <% @booking.travellers.each_with_index do |t, i|%>
+                <% if i==0 %>
+                <li data-target="#carousel-example" data-slide-to="<%= i %>" class="active"></li>
+                <% else %>
+                <li data-target="#carousel-example" data-slide-to="<%= i %>"></li>
+                <% end %>
+                <% end %>
+              </ol>
+
+              <div class="carousel-inner">
+                <% @booking.travellers.each_with_index do |t, i|%>
+                <% if i==0 %>
+                <div class="item active">
+                  <% else %>
+                  <div class="item">
+                    <% end %>
+                    <div class="booking-step6-personal-header">
+                      <h3>Traveller <%= (i + 1)  %></h3>
+                    </div>
+                    <div class="booking-step6-personal-form">
+                      <div class="booking-step6-personal-form-leftcol">
+                      <input id="title" type="text" value="<%=@booking.travellers[i].title %>" name="traveller_<%= i %>[title]" placeholder="Mr">
+                      <input id="first_name"type="text" name='traveller_<%=i%>[first_name]' placeholder="First Name">
+                      <input id="" type="text" name='traveller_<%=i%>[passport_number]' placeholder="Passport Number" ">
+                      <label for="passport_expiration">Passport expiry date</label>
+                      <input id="passport_expiration" type="date" name='traveller_<%=i%>[passport_expiration]' placeholder="Passport Expiration">
+                    </div>
+                    <div class="booking-step6-personal-form-rightcol">
+                      <input type="text" name='traveller_<%=i%>[last_name]' placeholder="Last Name">
+                      <input type="text" name='traveller_<%=i%>[nationality]' placeholder="Nationality">
+                      <label for="birth_date">Birth date</label>
+                      <input id="birth_date" type="date" name='traveller_<%=i%>[birth_date]' placeholder="Birth date">
+                    </div>
+                  </div>
+                </div>
+                <% end %>
+
+                <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
+        <input class="button-form button-form--next index-number-booking-new" type="submit" value="Pay">
       </div>
-  <input class="button-form button-form--next index-number-booking-new" type="submit" value="Pay">
     </div>
-
-
-
-
+    <!--  <button class="button-form button-form--next index-number-booking-new"> Next </button> -->
   </div>
-
-
-  <!--  <button class="button-form button-form--next index-number-booking-new"> Next </button> -->
-
-</div>
-
