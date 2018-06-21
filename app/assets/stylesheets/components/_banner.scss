@@ -45,9 +45,14 @@
    z-index: 9;
    margin: 0 -10px;
 
+    &:focus {
+      outline: none;
+    }
+
     &:before {
     content: "";
     position: absolute;
+    min-width: 80px;
     width: 102%;
     left: 0px;
     bottom: 18px;
