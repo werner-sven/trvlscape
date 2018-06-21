@@ -70,17 +70,32 @@
 .card-how-to--right {
 
   .card-text {
-
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
 
   .index-number {
-    position: absolute;
-    top: -27px;
-    left: -81px;
+    position: relative;
+    z-index: 1;
+    height: 340px;
+
+    h5 {
+      position: absolute;
+      color: $purple;
+      top: 38px;
+      left: 303px;
+      font-weight: 700;
+      font-size: 240px;
+    }
   }
 
   .card-image {
-    position: relative;
+    position: absolute;
+    top: 34px;
+    left: 6px;
+    z-index: -1;
   }
 }
 
