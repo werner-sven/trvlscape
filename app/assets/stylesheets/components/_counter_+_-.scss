@@ -1,9 +1,34 @@
+.counter-input-style {
+  border: 0px;
+  text-align: center;
+  width: 20%;
+  font-size: 46px;
+}
+
 .form-counter {
   width: 300px;
   margin: 0 auto;
   text-align: center;
   padding-top: 50px;
 }
+
+.value-button {
+  color: $orange;
+
+  .counter-title {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+  }
+
+  .counter svg {
+    fill: $orange;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+
 
 // .value-button {
 //   display: inline-block;
