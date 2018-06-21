@@ -31,9 +31,13 @@ class BookingsController < ApplicationController
   end
 
   def update
-    # update params for update when form exists
-    @booking.update(user: @current_user)
-    raise
+    #here we need an if_statement that executes different code depending which side we edit (booking vs traveller)
+
+    #execute this part only when traveller_param[for traveller 0] exists (or better when beeing redirected from booking/:id/traveller)
+    @booking.travellers.each_with_index do |traveller, index|
+      traveller.update(traveller_params(index))
+    end
+    redirect_to booking_path(@booking)
   end
 
   def show
@@ -51,6 +55,10 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:origin, :number_traveller)
+  end
+
+  def traveller_params(traveller_index)
+    params.require("traveller_#{traveller_index}".to_sym).permit(:title, :first_name, :last_name, :nationality, :birth_date, :passport_number, :passport_expiration)
   end
 
 end

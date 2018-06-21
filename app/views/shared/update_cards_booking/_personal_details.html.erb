@@ -14,21 +14,23 @@
           </div>
 
           <div class="booking-step6-personal-content">
+<!--
+        Include smart way for form that it prefills a 'value' if that input exists in database, otherwise display placeholder -->
 
             <div class="booking-step6-personal-header">
-             <h3>Traveller 1</h3>
+             <h3>Traveller <%= (number + 1)  %></h3>
            </div>
            <div class="booking-step6-personal-form">
              <div class="booking-step6-personal-form-leftcol">
-              <input id="title" type="text" name="traveller_1[title]" placeholder="Mr.">
-              <input id="first_name"type="text" name="traveller_1[first_name]" placeholder="First Name">
-              <input type="text" name="traveller_1[passport_number]" placeholder="Passport Number" ">
-              <input type="text" name="traveller_1[nationality]" placeholder="Nationality">
+              <input id="title" type="text" value="<%=@booking.travellers[number].title.class %>" name="traveller_<%= number %>[title]" placeholder="">
+              <input id="first_name"type="text" name='traveller_<%=number%>[first_name]' placeholder="First Name">
+              <input type="text" name='traveller_<%=number%>[passport_number]' placeholder="Passport Number" ">
+              <input type="text" name='traveller_<%=number%>[nationality]' placeholder="Nationality">
             </div>
             <div class="booking-step6-personal-form-rightcol">
-              <input type="text" name="traveller_1[last_name]" placeholder="Last Name">
-              <input type="text" name="traveller_1[passport_expiration]" placeholder="Passport Expiration">
-              <input type="text" name="traveller_1[birth_date]" placeholder="Birth date">
+              <input type="text" name='traveller_<%=number%>[last_name]' placeholder="Last Name">
+              <input type="text" name='traveller_<%=number%>[passport_expiration]' placeholder="Passport Expiration">
+              <input type="text" name='traveller_<%=number%>[birth_date]' placeholder="Birth date">
             </div>
           </div>
         </div>
