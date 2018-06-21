@@ -27,13 +27,21 @@
   font-size: 35px;
   font-weight: 700;
   color: white;
+  z-index: 1;
 
   &:hover {
 
   }
 }
 
+//
+
+
+
 .button-form--trip-type {
+  height: 50px;
+  width: 150px;
+  background-color: blue;
 
   &:hover {
 

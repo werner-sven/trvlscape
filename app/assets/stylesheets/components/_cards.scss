@@ -2,33 +2,106 @@
 
 // Cards How to Landing page
 
-.card-how-to--left {
+.card-how-to--left-top {
+
+margin-top: 12vh;
 
   .card-text {
-
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 107px;
   }
 
   .index-number {
+    position: relative;
+    z-index: 1;
+    height: 340px;
 
+    h5 {
+      position: absolute;
+      color: $light-blue;
+      top: 38px;
+      left: 5px;
+      font-weight: 700;
+      font-size: 240px;
+    }
   }
 
   .card-image {
-
+    position: absolute;
+    top: 34px;
+    left: 84px;;
+    z-index: -1;
   }
 }
+
+.card-how-to--left-bottom {
+
+  .card-text {
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 108px;
+  }
+
+  .index-number {
+    position: relative;
+    z-index: 1;
+    height: 340px;
+
+    h5 {
+      position: absolute;
+      color: $orange;
+      top: 38px;
+      left: 5px;
+      font-weight: 700;
+      font-size: 240px;
+    }
+  }
+
+  .card-image {
+    position: absolute;
+    top: 34px;
+    left: 84px;;
+    z-index: -1;
+  }
+}
+
 
 .card-how-to--right {
 
   .card-text {
-
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 16px;
+  padding-left: 90px;
   }
 
   .index-number {
+    position: relative;
+    z-index: 1;
+    height: 340px;
 
+    h5 {
+      position: absolute;
+      color: $purple;
+      top: 38px;
+      left: 303px;
+      font-weight: 700;
+      font-size: 240px;
+    }
   }
 
   .card-image {
-
+    position: absolute;
+    top: 34px;
+    left: 6px;
+    z-index: -1;
   }
 }
 
@@ -39,66 +112,146 @@
   overflow: hidden;
   margin-top:40%;
   min-height: 500px;
+  min-weight: 400px;
   background-size: cover;
   background-position: center;
   transition: transform .2s;
-
-
-
-
-
-
-  .card-testimonial--yellow:hover & {
-      background-color: rgba(150, 200, 30, 1);
-      text-align:center;
-      color:white;
-
-
-
+  font-size:20px;
+  font-color: red;
+  height:90px;
   }
 
-  .card-testimonial--red:hover & {
-      background-color: red;
-      text-align:center;
-      color:white;
 
-  }
 
-  .card-testimonial--blue:hover & {
-    background-color:blue;
-    text-align:center;
-    color:white;
 
-  }
-  }
+
+
 
 
 
 .card-description{
-  width: 400px;
-  height: 400px;
-  align-items:center;
-  justify-content:center;
+
+  height: 500px;
   font-size:0px;
-  color: grey;
-
-}
-
-.card-description:hover{
-  font-size:20px;
-  color:black;
-  background-color:yellow;
-  height: 485px;
-  weight: 400px;
-}
-
-.card-description:hover:after{
-  content: attr(data-hover);
-  font-size: 24px;
-  height: 100%;
-  weight: 100%;
-  color:black;
+  color: #FFFFFF;
+  transition: transform .2s;
   }
+
+.card-description--yellow:hover{
+  font-size:20px;
+  color:white;
+  font-weight: bold;
+  background-color:#41BBD9;
+  height: 500px;
+  text-align: center;
+  justify-content:center;
+  padding-left:15px;
+  padding-right: 15px;
+  top:100px;
+  }
+.card-description--blue:hover{
+  font-size:20px;
+  color:white;
+  font-weight: bold;
+  background-color:#5E239D;
+  height: 500px;
+  text-align: center;
+  justify-content:center;
+  padding-left:10px;
+  padding-right: 10px;
+  top:100px;
+  }
+
+.card-description--red:hover{
+  font-size:20px;
+  color:white;
+  font-weight: bold;
+  background-color:#CA4830;
+  height: 500px;
+  text-align: center;
+  justify-content:center;
+  padding-left:10px;
+  padding-right: 10px;
+  top:100px;
+  }
+
+
+
+.card-description--yellow:hover:after{
+  content: attr(data-hover);
+  font-size: 18px;
+  weight: 90%;
+  color:white;
+  padding-left: 13px;
+  height: 500px;
+
+  }
+
+.testimonials {
+  p{
+   text-align:center;
+   justify-content:center;
+   font-size:44px;
+   bottom: 34px;
+   margin-bottom: 20px;
+   padding-top: 217px;
+   font-weight:bolder;
+   color: #FFFFFF;
+}
+
+.card-description--yellow{
+  height:500px;
+}
+.card-description--blue{
+  height:500px;
+}
+.card-description--red{
+  height:500px;
+}
+  }
+  .card-description--yellow:hover:after {
+  content: attr(data-hover);
+  font-size: 18px;
+  weight: 90%;
+  color:white;
+  padding-left: 13px;
+
+
+  }
+
+
+
+.card-description--blue:hover:after{
+  content: attr(data-hover);
+  font-size: 18px;
+  weight: 90%;
+  color:white;
+  padding-left: 13px;
+  align-item: center;
+
+
+  }
+
+
+.card-description--red:hover:after{
+  content: attr(data-hover);
+  font-size: 18px;
+  weight: 90%;
+  color:white;
+  padding-left: 13px;
+
+  }
+
+  .card-description-data-hover{
+    content: attr(data-hover);
+    text-align:center;
+    justify-content:center;
+    color:red;
+  }
+
+
+
+
 
 
 
@@ -114,12 +267,30 @@
 
 
 
+
+
 // Cards Booking Process
 
-.card-booking-process {
+.departure_time-container {
 
-  height: 350px;
-  border: 0.25px solid lightgray;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.text-container {
+  padding-bottom: 5%;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.card-booking-process {
+  height: 50vh;
+  border: 0.25px solid $light-gray;
   margin-top: 20%;
   margin-bottom: 40%;
   background-color: white;
@@ -147,10 +318,138 @@
   }
 
   .content-container {
+    justify-content: center;
     padding: 5% 5% 5% 5%;
+    background-color: white;
     height: 100%;
     width: 100%;
   }
+
+  .image-container-people-counter {
+    height: 90%;
+    width: 60%;
+    background-image: image-url("people_group.jpg");
+    background-size: cover !important;
+    border-radius: 3px;
+  }
+
+  .content-container--grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .grid-counter-left-element {
+    grid-row: 1 / span 5;
+    grid-column: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-counter-toggle {
+    grid-row: 4 / span 1;
+    grid-column: 2 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-counter-heading-toggle {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-center-fit-size {
+    height: 100%;
+    width: 100%;
+
+  }
+
+  // Fourth card
+
+  .grid-preferences {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 40%;
+    grid-template-columns: 40% 1fr 1fr;
+  }
+
+  .grid-preferences-left {
+    grid-row: 1 / span 4;
+    grid-column: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-heading-preferences-first-right {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+      padding-left: 15%;
+    }
+  }
+
+  .grid-heading-preferences-radio-right {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    padding-left: 10%;
+  }
+
+  .grid-heading-preferences-second-right {
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+      padding-left: 15%;
+    }
+  }
+
+  .grid-heading-preferences-last-right {
+    grid-row: 4 / span 1;
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 15%;
+  }
+
+}
+
+//second booking new
+.traveller_origin {
+  padding-left: 7%;
+  padding-top: 7%;
+
+  h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.departure_date {
+
+}
+
+.departure_time {
+
 }
 
 //Your next Booking
