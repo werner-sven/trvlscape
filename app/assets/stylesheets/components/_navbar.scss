@@ -1,13 +1,20 @@
 /* Main navbar */
 .navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+  // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: $light-gray;
   transition: all 0.3s ease;
+  z-index: 2;
+  width: 100vw;
   height: 70px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.navbar-lp {
+  position: absolute;
+  background: transparent;
 }
 
 .navbar-wagon p{
@@ -17,6 +24,10 @@
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
+
+  &:hover {
+    text-decoration: $orange;
+  }
 }
 
 /* User Avatar */
@@ -33,6 +44,16 @@
   justify-content: space-between;
 }
 
+#name-logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: $snowwhite;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
@@ -41,12 +62,13 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
-  font-size: 14px;
+  color: $snowwhite;
+  font-size: 24px;
+  font-weight: 700;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
-  text-decoration: none;
+  color: $orange;
+  text-decoration: $orange;
 }
 
 /* Dropdown menu */
