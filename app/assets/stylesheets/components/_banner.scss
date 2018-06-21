@@ -1,6 +1,8 @@
 .banner{
   color: white;
   background-size: cover !important;
+  position: relative;
+  z-index: 1;
 
   h1 {
 
@@ -12,8 +14,8 @@
   background-image: image-url("Banner_backpack_orange.jpg");
 
   .banner-text {
-    position: relative;
-    top: 30%;
+    position: absolute;
+    top: 45%;
     left: 5%;
   }
 
@@ -45,9 +47,14 @@
    z-index: 9;
    margin: 0 -10px;
 
+    &:focus {
+      outline: none;
+    }
+
     &:before {
     content: "";
     position: absolute;
+    min-width: 80px;
     width: 102%;
     left: 0px;
     bottom: 18px;
@@ -70,6 +77,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+    margin-left: -5%;
+  }
+
+  .button-lp-positon {
+    position: absolute;
+    top: 115%;
   }
 }
 

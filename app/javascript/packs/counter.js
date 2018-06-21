@@ -1,7 +1,7 @@
 
 const valueInput = document.getElementById('form-traveller-number');
 
-let value = valueInput.value;
+
 
 if (valueInput != null) {
 
@@ -22,6 +22,7 @@ if (valueInput != null) {
 
 
 function increaseValue() {
+let value = valueInput.value;
 
   value = isNaN(value) ? 0 : value;
   value++;
@@ -29,6 +30,7 @@ function increaseValue() {
 }
 
 function decreaseValue() {
+let value = valueInput.value;
 
   value = isNaN(value) ? 0 : value;
   value < 1 ? value = 1 : '';

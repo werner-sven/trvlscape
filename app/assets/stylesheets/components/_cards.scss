@@ -119,6 +119,7 @@ margin-top: 12vh;
   font-size:20px;
   font-color: red;
   height:90px;
+
   }
 
 
@@ -188,6 +189,11 @@ margin-top: 12vh;
   }
 
 .testimonials {
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-bottom: 15vh;
+
+
   p{
    text-align:center;
    justify-content:center;
@@ -197,6 +203,7 @@ margin-top: 12vh;
    padding-top: 217px;
    font-weight:bolder;
    color: #FFFFFF;
+
 }
 
 .card-description--yellow{
@@ -289,7 +296,7 @@ margin-top: 12vh;
 }
 
 .card-booking-process {
-  height: 50vh;
+  height: 430px;
   border: 0.25px solid $light-gray;
   margin-top: 20%;
   margin-bottom: 40%;
