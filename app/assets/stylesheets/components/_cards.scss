@@ -80,7 +80,7 @@
   align-items:center;
   justify-content:center;
   font-size:0px;
-  color: grey;
+  color: $gray;
 
 }
 
@@ -136,7 +136,7 @@
 .card-booking-process {
 
   height: 50vh;
-  border: 0.25px solid lightgray;
+  border: 0.25px solid $light-gray;
   margin-top: 20%;
   margin-bottom: 40%;
   background-color: white;
@@ -181,7 +181,7 @@
 
   .content-container--grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   }
 
@@ -213,6 +213,68 @@
     height: 100%;
     width: 100%;
 
+  }
+
+  // Fourth card
+
+  .grid-preferences {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 40%;
+    grid-template-columns: 40% 1fr 1fr;
+  }
+
+  .grid-preferences-left {
+    grid-row: 1 / span 4;
+    grid-column: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-heading-preferences-first-right {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+      padding-left: 15%;
+    }
+  }
+
+  .grid-heading-preferences-radio-right {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    padding-left: 10%;
+  }
+
+  .grid-heading-preferences-second-right {
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+      padding-left: 15%;
+    }
+  }
+
+  .grid-heading-preferences-last-right {
+    grid-row: 4 / span 1;
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 15%;
   }
 
 }
