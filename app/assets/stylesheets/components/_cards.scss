@@ -116,6 +116,17 @@
 
 // Cards Booking Process
 
+.departure_time-container {
+
+}
+
+.text-container {
+  padding-bottom: 5%;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
 .card-booking-process {
 
   height: 50vh;
@@ -147,10 +158,31 @@
   }
 
   .content-container {
+    justify-content: center;
     padding: 5% 5% 5% 5%;
+    background-color: white;
     height: 100%;
     width: 100%;
   }
+}
+
+//second booking new
+.traveller_origin {
+  padding-left: 7%;
+  padding-top: 7%;
+
+  h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.departure_date {
+
+}
+
+.departure_time {
+
 }
 
 //Your next Booking
