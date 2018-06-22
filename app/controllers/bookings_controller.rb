@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create]
+  skip_before_action :authenticate_user!, only: [:new, :create, :edit, :update, :show, :traveller]
   before_action :set_booking, only: [:show, :edit, :update, :traveller]
 
   def new
@@ -11,6 +11,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.start_time = DateTime.parse("#{params[:booking]["start_date"]} #{params[:booking]["start_time"]}")
     @booking.number_traveller.times do
       @booking.new_traveller
     end
@@ -56,7 +57,7 @@ class BookingsController < ApplicationController
   # set params for booking
 
   def booking_params
-    params.require(:booking).permit(:origin, :number_traveller, :type_id, :start_date, :start_time, :climate)
+    params.require(:booking).permit(:origin, :number_traveller, :type_id, :climate)
   end
 
   def traveller_params(traveller_index)
