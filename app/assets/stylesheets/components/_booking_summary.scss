@@ -1,5 +1,5 @@
 .summary-container {
-  height: 100vh;
+  height: 130vh;
   width: 100vw;
   // background-color: pink;
 
@@ -7,63 +7,91 @@
     display: grid;
     grid-template-columns: 50% 15% 35%;
     grid-template-rows: 15% 25% 25% 25% 10%;
-    height: 100vh;
+    height: 130vh;
     width: 100vw;
   }
 
-    .grid-summary-general-heading {
-      grid-row: 1 / span 1;
-      grid-column: 1 / span 3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .grid-summary-general-heading {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      span {
-        font-size: 40px;
-        font-weight: 700;
-      }
-
+    span {
+      font-size: 40px;
+      font-weight: 700;
+      color: $gray;
     }
 
-    .grid-image-left {
-      grid-row: 1 / span 5;
-      grid-column: 1 / span 2;
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      // background-color: blue;
-      background-image: image-url("people_group.jpg");
-      background-size: cover !important;
+
+  }
+
+  .grid-image-left {
+    grid-row: 1 / span 5;
+    grid-column: 1 / span 2;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // background-color: blue;
+    background-image: image-url("testemonials_mountains.jpg");
+    background-size: cover !important;
+    height: 100%;
+    width: 100%;
+  }
+
+  .image-summary-booking {
+    background-image: image-url("people_group.jpg");
+    background-size: cover !important;
+    border-radius: 3px;
+    margin-right:100px;
+  }
+
+  .grid-content-right-first {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 2;
+    // background-color: blue;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+
+    .container-summary-content{
+      background-color: white;
+      padding: 2% 2%;
       height: 100%;
       width: 100%;
-    }
 
-      .image-summary-booking {
-        background-image: image-url("people_group.jpg");
-        background-size: cover !important;
-        border-radius: 3px;
-      }
-
-    .grid-content-right-first {
-      grid-row: 2 / span 1;
-      grid-column: 2 / span 2;
-      // background-color: blue;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-right: 15px;
-
-      .container-summary-content{
-        background-color: white;
-        height: 100%;
-        width: 100%;
+      .style-heading{
 
         span {
           font-size: 30px;
           font-weight: 500;
+          color: black;
+          font-weight:bolder;
         }
 
       }
+
+      .style-body{
+
+        span{
+          font-size:18px;
+          font-weight: 500;
+          color: $gray;
+        }
+
+        .style-body-booking{
+
+          span{
+            font-size:18px;
+            font-weight: 500;
+            color: $light-gray;
+          }
+        }
+      }
     }
+  }
+
 
     .grid-content-right-second {
       grid-row: 3 / span 1;
@@ -74,17 +102,41 @@
       padding-right: 15px;
 
       .container-summary-content{
-        background-color: white;
-        height: 100%;
-        width: 100%;
+      background-color: white;
+      padding: 2% 2%;
+      height: 100%;
+      width: 100%;
+
+      .style-heading{
 
         span {
           font-size: 30px;
           font-weight: 500;
+          color: black;
+          font-weight:bolder;
         }
 
       }
+
+      .style-body{
+
+        span{
+          font-size:18px;
+          font-weight: 500;
+          color: $gray;
+        }
+
+        .style-body-booking{
+
+          span{
+            font-size:18px;
+            font-weight: 500;
+            color: $light-gray;
+          }
+        }
+      }
     }
+  }
 
     .grid-content-right-third {
       grid-row: 4 / span 1;
@@ -95,17 +147,41 @@
       padding-right: 15px;
 
       .container-summary-content{
-        background-color: white;
-        height: 100%;
-        width: 100%;
+      background-color: white;
+      padding: 2% 2%;
+      height: 100%;
+      width: 100%;
+
+      .style-heading{
 
         span {
           font-size: 30px;
           font-weight: 500;
+          color: black;
+          font-weight:bolder;
         }
 
       }
+
+      .style-body{
+
+        span{
+          font-size:18px;
+          font-weight: 500;
+          color: $gray;
+        }
+
+        .style-body-booking{
+
+          span{
+            font-size:18px;
+            font-weight: 500;
+            color: $light-gray;
+          }
+        }
+      }
     }
+  }
 
     .grid-submit-button {
       grid-row: 5 / span 1;
@@ -120,4 +196,4 @@
         font-weight: 700;
       }
     }
-}
+  }
