@@ -16,14 +16,26 @@ slider.oninput = function() {
     priceSliderValue.innerHTML = `Budget per person: ${this.value}`;
     if (this.value < 200) {
       hostel.checked = true;
+      hotel.checked = false;
+      bnb.checked = false;
+      luxusHotel.checked = false;
     } else if (this.value < 300) {
       bnb.checked = true;
+      hotel.checked = false;
+      hostel.checked = false;
+      luxusHotel.checked = false;
     } else if (this.value < 600) {
       hotel.checked = true;
-    } else {
+      bnb.checked = false;
+      hostel.checked = false;
+      luxusHotel.checked = false;
+    } else if (this.value > 600) {
       luxusHotel.checked = true;
-    };
-}
+      hotel.checked = false;
+      bnb.checked = false;
+      hostel.checked = false;
+    }
+    }
 
 //hostel.onclick = console.log("n");
 //bnb.addEventListener("input", console.log("n"));
