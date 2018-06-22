@@ -1,5 +1,23 @@
 <div class="grid-content-right-second">
   <div class="container-summary-content">
-    <span>hello</>
+    <div class="style-heading"> <span>Personal Details </> </div>
+      <div class="style-body">
+      <span>NUMBER OF PEOPLE: <%= booking.number_traveller  %> </span><br>
+      <span>START POINT: <%= booking.origin %></span><br>
+      <span>DEPARTURE TIME:  <%= booking.start_time %> </span><br>
+      <span>CLIMATE: <%= booking.climate %> </span><br>
+      <span>ACCOMODATION TYPE: <%= booking.accommodation_type %> </span><br>
+      <span>EXCLUDED COUNTRIES: <%= booking.excluded_countries %></span><br>
+    </div>
+
+
+
+
+    <span>Personal Details</>
+       <div>
+        <p>Name: <%=booking.travellers.first.first_name %></p>
+        <p>Email: sezen@hotmail.com</p>
+        <p>Phone: +053974362002</p>
+       </div>
   </div>
 </div>
