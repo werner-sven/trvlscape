@@ -12,6 +12,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.start_time = DateTime.parse("#{params[:booking]["start_date"]} #{params[:booking]["start_time"]}")
+    @booking.budget_pp = params[:budget_pp].to_i
     @booking.number_traveller.times do
       @booking.new_traveller
     end
@@ -57,7 +58,7 @@ class BookingsController < ApplicationController
   # set params for booking
 
   def booking_params
-    params.require(:booking).permit(:origin, :number_traveller, :type_id, :climate, :accommodation_type, :budget_pp)
+    params.require(:booking).permit(:origin, :number_traveller, :type_id, :climate, :accommodation_type)
   end
 
   def traveller_params(traveller_index)
