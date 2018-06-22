@@ -2,12 +2,12 @@
   <div class="container-summary-content">
     <div class="style-heading"> <span>Trip Details</> </div>
       <div class="style-body">
-      <span>NUMBER OF PEOPLE: <%= booking.number_traveller  %> </span><br>
-      <span>START POINT: <%= booking.origin %></span><br>
-      <span>DEPARTURE TIME:  <%= booking.start_time %> </span><br>
-      <span>CLIMATE: <%= booking.climate %> </span><br>
-      <span>ACCOMODATION TYPE: <%= booking.accommodation_type %> </span><br>
-      <span>EXCLUDED COUNTRIES: <%= booking.excluded_countries %></span><br>
+      <span>Number of Travellers: <%= booking.number_traveller  %> </span><br>
+      <span>Origin: <%= booking.origin %></span><br>
+      <span>Depature:  <%= booking.start_time.strftime("%d.%m.%Y")%>  after <%= booking.start_time.strftime("%l %p")%> </span><br>
+      <span>Climate: <%= booking.climate %> </span><br>
+      <span>Accomodation type: <%= booking.accommodation_type %> </span><br>
+      <span>Excluded countries: <%= booking.excluded_countries %></span><br>
     </div>
 
   </div>
