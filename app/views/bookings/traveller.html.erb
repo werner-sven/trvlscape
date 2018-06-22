@@ -2,5 +2,7 @@
   <input type="hidden" name="_method" value="patch">
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
+    <%= render '/shared/banners/banner_booking_new' %>
+
     <%= render '/shared/update_cards_booking/personal_details' %>
 </form>

@@ -32,8 +32,12 @@
   font-weight: 700;
   color: white;
   z-index: 1;
+  border-radius: 6px;
+  border: 0px;
+  opacity: .9;
 
   &:hover {
+    opacity: 1;
 
   }
 }
