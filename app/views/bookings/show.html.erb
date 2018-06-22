@@ -7,16 +7,15 @@
     <div class="grid-summary-general-heading">
       <span>Summary of your trip</span>
     </div>
-    <%= render '/shared/cards_summary_booking/first_card', booking: @booking %>
-    <%= render '/shared/cards_summary_booking/second_card', booking: @booking %>
-    <%= render '/shared/cards_summary_booking/third_card', booking: @booking %>
     <div class="grid-submit-button">
       <br>
       <%= link_to(confirmation_booking_path(@booking)) do %>
-      <button class="button-form button-form--next index-number-booking-new"> Pay </button>
+      <button class="button-form button-form--next button-submit-booking"> Pay </button>
       <% end %>
     </div>
-
+      <%= render '/shared/cards_summary_booking/first_card', booking: @booking %>
+      <%= render '/shared/cards_summary_booking/second_card', booking: @booking %>
+      <%= render '/shared/cards_summary_booking/third_card', booking: @booking %>
   </div>
 </div>
 
