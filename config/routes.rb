@@ -5,14 +5,11 @@ Rails.application.routes.draw do
 
   resources :bookings, only:[:new, :create, :show, :edit, :update] do
     member do
-      get 'traveller' , to:"bookings#traveller"
+      get 'traveller' , to: "bookings#traveller"
+      get 'confirmation', to: "bookings#confirmation", as: "confirmation"
     end
   end
 
-
-
   get "/mysurprise", to: "dashboard#surprise", as: "my_surprise"
-
-
 
 end

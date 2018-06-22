@@ -45,6 +45,9 @@ class BookingsController < ApplicationController
   def traveller
   end
 
+  def confirmation
+  end
+
   private
   def set_booking
     @booking = Booking.find(params[:id])
@@ -59,5 +62,4 @@ class BookingsController < ApplicationController
   def traveller_params(traveller_index)
     params.require("traveller_#{traveller_index}".to_sym).permit(:title, :first_name, :last_name, :nationality, :birth_date, :passport_number, :passport_expiration)
   end
-
 end
