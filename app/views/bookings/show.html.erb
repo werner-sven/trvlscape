@@ -11,7 +11,10 @@
     <%= render '/shared/cards_summary_booking/second_card', booking: @booking %>
     <%= render '/shared/cards_summary_booking/third_card', booking: @booking %>
     <div class="grid-submit-button">
-      <span>Button here please</span>
+      <br>
+      <%= link_to(confirmation_booking_path(@booking)) do %>
+      <button class="button-form button-form--next index-number-booking-new"> Pay </button>
+      <% end %>
     </div>
 
   </div>
