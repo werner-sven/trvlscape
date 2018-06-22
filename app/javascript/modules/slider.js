@@ -23,7 +23,14 @@ slider.oninput = function() {
     } else {
       luxusHotel.checked = true;
     };
-}};
+}
+
+//hostel.onclick = console.log("n");
+//bnb.addEventListener("input", console.log("n"));
+//hotel.addEventListener("onclick", slider.value = 500);
+//luxusHotel.addEventListener("onclick", slider.value = 800);
+
+};
 
 export { slider };
 
