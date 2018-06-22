@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create, :edit, :update, :show, :traveller]
+  skip_before_action :authenticate_user!, only: [:new, :create, :edit, :update, :show, :traveller, :confirmation]
   before_action :set_booking, only: [:show, :edit, :update, :traveller]
 
   def new
