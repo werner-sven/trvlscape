@@ -57,7 +57,7 @@ class BookingsController < ApplicationController
   # set params for booking
 
   def booking_params
-    params.require(:booking).permit(:origin, :number_traveller, :type_id, :climate)
+    params.require(:booking).permit(:origin, :number_traveller, :type_id, :climate, :accommodation_type, :budget_pp)
   end
 
   def traveller_params(traveller_index)
