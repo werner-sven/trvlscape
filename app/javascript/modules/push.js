@@ -1,33 +1,27 @@
-var smoothScroll = function(elementId) {
-    var MIN_PIXELS_PER_STEP = 16;
-    var MAX_SCROLL_STEPS = 30;
-    var target = document.getElementById(elementId);
-    var scrollContainer = target;
-    do {
-        scrollContainer = scrollContainer.parentNode;
-        if (!scrollContainer) return;
-        scrollContainer.scrollTop += 1;
-    } while (scrollContainer.scrollTop == 0);
+function scrollWin() {
+  const buttonPusher0 = document.querySelector("#scroll0");
+  const buttonPusher1 = document.querySelector("#scroll1");
+  const buttonPusher2 = document.querySelector("#scroll2");
+  const buttonPusher3 = document.querySelector("#scroll3");
 
-    var targetY = 0;
-    do {
-        if (target == scrollContainer) break;
-        targetY += target.offsetTop;
-    } while (target = target.offsetParent);
+  if (buttonPusher0 === undefined) {return};
+    buttonPusher0.addEventListener("click", click);
 
-    var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
-                                 (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
+  if (buttonPusher1 === undefined) {return};
+    buttonPusher1.addEventListener("click", click);
 
-    var stepFunc = function() {
-        scrollContainer.scrollTop =
-            Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
+  if (buttonPusher2 === undefined) {return};
+    buttonPusher2.addEventListener("click", click);
 
-        if (scrollContainer.scrollTop >= targetY) {
-            return;
-        }
+  if (buttonPusher3 === undefined) {return};
+    buttonPusher3.addEventListener("click", click);
 
-        window.requestAnimationFrame(stepFunc);
-    };
-
-    window.requestAnimationFrame(stepFunc);
 }
+
+function click(event) {
+  event.preventDefault();
+  window.scrollBy(0, window.innerHeight)
+}
+
+export { scrollWin };
+// window.scrollBy(0, 200)
