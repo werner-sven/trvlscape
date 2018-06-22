@@ -1,0 +1,17 @@
+<h1>Show page of a booking</h1>
+
+<h2>Your Booking</h2>
+<p>Type of Travel: <%=@booking.type.name  %></p>
+<p>Depature: <%=@booking.start_date %></p>
+<p>Depaturing after: <%= @booking.start_time.strftime('%H')  %>pm</p>
+<p>Your Destination will be: <%=@booking.climate  %></p>
+
+<%=@booking.number_traveller  %>
+<% @booking.travellers.each do |traveller|  %>
+<p> Name: <%= traveller.first_name  %> <%= traveller.last_name  %> </p>
+<p>Passport-num:  <%= traveller.passport_number  %></p>
+<% end %>
+
+  <%= link_to "Edit booking details", edit_booking_path(@booking), class: "btn btn-primary btn-lg" %>
+  <%= link_to "Edit Traveller details", traveller_booking_path(@booking), class: "btn btn-primary btn-lg" %>
+
