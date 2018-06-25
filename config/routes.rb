@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations"}
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -10,6 +10,12 @@ Rails.application.routes.draw do
     end
   end
 
+#maybe payment needs to be nested above
+  resources :bookings, only: [:show, :create] do
+    resources :payments, only: [:new, :create]
+  end
+
   get "/mysurprise", to: "dashboard#surprise", as: "my_surprise"
+
 
 end

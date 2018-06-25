@@ -3,7 +3,7 @@
     <div class="style-heading"> <span>Personal Details </> </div>
       <div class="style-body">
         <span>Name: <%=booking.travellers.first.first_name %> <%=booking.travellers.first.last_name %> </span><br>
-        <span>Email: sezen@hotmail.com</span><br>
+        <span>Email: <%= current_user.email %> </span><br>
         <span>Phone: +053974362002</span><br>
       </div>
     </div>
