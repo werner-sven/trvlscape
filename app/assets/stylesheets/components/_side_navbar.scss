@@ -1,14 +1,17 @@
+.nav-side-center{
+    height: 430px;
+    display: flex;
+    align-items: center;
+
+}
 .nav-side{
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-
-  top: (27%);
-  height: 10%;
   width: 150px;
   border-radius: 5px;
   float: right;
   position: sticky;
-  margin: 10% 1.5% 10% 0;
+  margin: 7% 1.5% 0 0;
 
   a{
     text-decoration: none;

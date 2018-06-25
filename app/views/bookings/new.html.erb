@@ -5,7 +5,6 @@
 <form action="<%= bookings_path(@booking) %>" method="post">
 
   <input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden">
-
   <div class="nav-side">
     <a href="#first-step">
       <div class="nav-side-step">
@@ -37,7 +36,7 @@
         <div class="nav-side-step-num ">5</div>
       </div>
     </a>
-  </div>
+    </div>
 
 
   <%= render '/shared/index_cards_booking/first_card' %>
