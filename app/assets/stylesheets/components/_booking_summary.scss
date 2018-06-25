@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 50% 15% 35%;
     grid-template-rows: 15% 25% 25% 25% 10%;
-    height: 130vh;
+    min-height: 130vh;
     width: 100vw;
   }
 
@@ -197,3 +197,43 @@
       }
     }
   }
+
+
+  .dropdown {
+    position: relative;
+    font-weight:bold;
+    display: inline-block;
+  }
+  .dropdown-content{
+
+    display:block;
+    position:absolute;
+    background-color: white;
+    min-width:180px;
+    z-index: 1;
+  }
+  .dropdown-hover .dropdown-content{
+    display: block;
+  }
+  .dropdown-content a{
+    font-size:15px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
