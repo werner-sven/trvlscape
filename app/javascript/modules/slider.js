@@ -7,10 +7,10 @@ const bnb = document.querySelector("#button-bnb");
 const hotel = document.querySelector("#button-hotel");
 const luxusHotel = document.querySelector("#button-luxus-hotel");
 
-if (slider === undefined) {return};
+//if (slider === undefined) {return};
 
 // Display the default slider value
-
+if (slider != null) {
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
     priceSliderValue.innerHTML = `Budget per person: ${this.value}`;
@@ -35,7 +35,7 @@ slider.oninput = function() {
       bnb.checked = false;
       hostel.checked = false;
     }
-    }
+    }}
 
 //hostel.onclick = console.log("n");
 //bnb.addEventListener("input", console.log("n"));

@@ -4,16 +4,10 @@ function scrollWin() {
   const buttonPusher2 = document.querySelector("#scroll2");
   const buttonPusher3 = document.querySelector("#scroll3");
 
-  if (buttonPusher0 === undefined) {return};
+  if (buttonPusher0 != null) {
     buttonPusher0.addEventListener("click", click);
-
-  if (buttonPusher1 === undefined) {return};
     buttonPusher1.addEventListener("click", click);
-
-  if (buttonPusher2 === undefined) {return};
     buttonPusher2.addEventListener("click", click);
-
-  if (buttonPusher3 === undefined) {return};
     buttonPusher3.addEventListener("click", click);
 
 }
@@ -21,7 +15,7 @@ function scrollWin() {
 function click(event) {
   event.preventDefault();
   window.scrollBy(0, window.innerHeight)
-}
+}};
 
 export { scrollWin };
 // window.scrollBy(0, 200)
