@@ -1,12 +1,45 @@
 
-<!-- banner here -->
+<%= render '/shared/banners/banner_booking_new' %>
 
 
 <form action="<%= bookings_path(@booking) %>" method="post">
 
   <input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden">
 
-  <%= render '/shared/banners/banner_booking_new' %>
+  <div class="nav-side">
+    <a href="#first-step">
+      <div class="nav-side-step">
+        <div class="nav-side-step-text">Your Travel</div>
+        <div class="nav-side-step-num num1">1</div>
+      </div>
+    </a>
+    <a href="#second-step">
+      <div class="nav-side-step">
+        <div class="nav-side-step-text">Origin</div>
+        <div class="nav-side-step-num">2</div>
+      </div>
+    </a>
+    <a href="#third-step">
+      <div class="nav-side-step">
+        <div class="nav-side-step-text ">Travellers</div>
+        <div class="nav-side-step-num ">3</div>
+      </div>
+    </a>
+    <a href="#modal-anchor">
+      <div class="nav-side-step">
+        <div class="nav-side-step-text ">Preferences</div>
+        <div class="nav-side-step-num ">4</div>
+      </div>
+    </a>
+    <a href="#fith-step">
+      <div class="nav-side-step">
+        <div class="nav-side-step-text ">Budget</div>
+        <div class="nav-side-step-num ">5</div>
+      </div>
+    </a>
+  </div>
+
+
   <%= render '/shared/index_cards_booking/first_card' %>
   <%= render '/shared/index_cards_booking/second_card' %>
   <%= render '/shared/index_cards_booking/third_card' %>

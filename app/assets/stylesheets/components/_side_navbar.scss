@@ -1,0 +1,48 @@
+.nav-side{
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+  top: (27%);
+  height: 10%;
+  width: 150px;
+  border-radius: 5px;
+  float: right;
+  position: sticky;
+  margin: 10% 1.5% 10% 0;
+
+  a{
+    text-decoration: none;
+    color: #b8b8b8;
+    opacity: 0.7;
+
+  }
+
+  a:hover{
+    color: black;
+  }
+}
+
+.nav-side-step{
+  display: flex;
+  text-align: right;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-side-step-text{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-side-step-num{
+  font-size: 36px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+
+.active{
+  color: black;
+  opacity: 1;
+}
+
