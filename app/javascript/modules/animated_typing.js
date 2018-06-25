@@ -1,8 +1,9 @@
 import Typed from 'typed.js';
 
 function loadDynamicBannerText() {
-  let clickCount = 0;
   const yourName = document.querySelector("#banner-name-input-visible");
+  const fuckThis = document.querySelector("#fuckthis");
+  const fuckThisToo = document.querySelector("#fuck-this-too");
   const yourCity = document.querySelector("#banner-city-input-visible");
 
   if (yourName != null) {
@@ -13,38 +14,40 @@ function loadDynamicBannerText() {
       loop: true
     });
     yourName.addEventListener("focus", stopAndClear);
-    console.log(typerOne)
 
 
     function stopAndClear() {
-      const self = this;
-      clickCount++;
+      yourName.removeEventListener("focus", stopAndClear);
       typerOne.stop();
-      yourName.innerHTML = "     ";
-      //yourName.innerHTML = '       ';
+      yourName.remove();
+      fuckthis.hidden = false;
+      fuckthis.focus();
+      document.querySelector(".typed-cursor").remove();
 
       yourName.addEventListener("blur", stopFirstCursor);
+      yourCity.innerText = "";
 
-      if (clickCount === 1) {
-        yourCity.innerText = "";
-        self.typerTwo = new Typed( yourCity, {
-          strings: ["Your city"],
-          typeSpeed: 100,
-          loop: true
-        });
-      };
+      self.typerTwo = new Typed( yourCity, {
+        strings: ["Your city"],
+        typeSpeed: 100,
+        loop: true
+      });
+
+      yourCity.addEventListener("focus", setSecondClicked);
 
       function stopFirstCursor() {
         document.querySelectorAll(".typed-cursor")[0].style.display = "none";
       }
 
-      yourCity.addEventListener("focus", setSecondClicked);
-
 
       function setSecondClicked() {
+        yourCity.removeEventListener("focus", setSecondClicked);
         self.typerTwo.stop();
-        yourCity.innerText = "      ";
-        yourCity.addEventListener("blur", stopSecondCursor);
+        yourCity.remove();
+        fuckThisToo.hidden = false;
+        fuckThisToo.focus();
+        document.querySelector(".typed-cursor").remove();
+
 
         function stopSecondCursor() {
           document.querySelectorAll(".typed-cursor")[1].style.display = "none";

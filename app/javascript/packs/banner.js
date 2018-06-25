@@ -1,5 +1,5 @@
-const nameInputVisible = document.querySelector("#banner-name-input-visible");
-const cityInputVisible = document.querySelector("#banner-city-input-visible");
+const nameInputVisible = document.querySelector("#fuckthis");
+const cityInputVisible = document.querySelector("#fuck-this-too");
 const nameInputInvisible = document.querySelector("#banner-name-input-hidden");
 const cityInputInvisible = document.querySelector("#banner-city-input-hidden");
 const submit = document.querySelector("#banner-surprise-me-button");
