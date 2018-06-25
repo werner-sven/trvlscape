@@ -52,6 +52,7 @@ class BookingsController < ApplicationController
       @booking.user = current_user
       @booking.save!
     end
+
   end
 
   def traveller

@@ -10,6 +10,12 @@ Rails.application.routes.draw do
     end
   end
 
+#maybe payment needs to be nested above
+  resources :bookings, only: [:show, :create] do
+    resources :payments, only: [:new, :create]
+  end
+
   get "/mysurprise", to: "dashboard#surprise", as: "my_surprise"
+
 
 end
