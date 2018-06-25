@@ -8,6 +8,10 @@ function loadDynamicBannerText() {
 
   if (yourName != null) {
 
+    window.setTimeout(fadeValueProposition, 3000);
+
+    window.setTimeout(()=>{}, 1000)
+
     const typerOne = new Typed(yourName, {
       strings: ["Your name"],
       typeSpeed: 100,
@@ -56,5 +60,11 @@ function loadDynamicBannerText() {
     }
   }
 };
+
+function fadeValueProposition(){
+  document.querySelector(".loading-overlay").remove();
+  //.hidden = true;
+};
+
 
 export { loadDynamicBannerText };
