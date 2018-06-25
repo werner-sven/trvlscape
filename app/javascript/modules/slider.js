@@ -48,3 +48,24 @@ export { slider };
 
 
 // 200 Hostel 300bnb 600 hotel
+
+
+// function checkInView(item, index) {
+//   const windowHeight = window.innerHeight;
+//   const elementTopToPageTop = item.getBoundingClientRect().top;
+//     // const elementTopToPageBottom = elementTopToPageTop - windowHeight;
+
+//      if (elementTopToPageTop > triggerOffset && elementTopToPageTop < (windowHeight - triggerOffset)
+//     // && elementTopToPageBottom > triggerOffset
+//           ) {
+//       navBarSteps[index].classList.add("active");
+//     return true;
+//     }
+//     navBarSteps[index].classList.remove("active");
+//     return false;
+// }
+
+// document.addEventListener("scroll", function(){
+//   indexnum.forEach(checkInView);
+//   }
+// );
