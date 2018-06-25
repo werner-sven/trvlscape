@@ -1,43 +1,57 @@
 import Typed from 'typed.js';
 
-let firstClicked = false;
-
 function loadDynamicBannerText() {
+  let clickCount = 0;
+  const yourName = document.querySelector("#banner-name-input-visible");
+  const yourCity = document.querySelector("#banner-city-input-visible");
 
-const yourName = document.querySelector("#banner-name-input-visible");
-const yourCity = document.querySelector("#banner-city-input-visible");
+  if (yourName != null) {
 
-if (yourName != null) {
-  yourName.addEventListener("focus", set_first_clicked);
-
-  const typerOne = new Typed(yourName, {
-    strings: ["Your name"],
-    typeSpeed: 100,
-    loop: true
-  });
-
-
-  function set_first_clicked() {
-    typerOne.loop = false;
-    document.querySelectorAll(".typed-cursor")[0].style.display = "none";
-    const typerTwo = new Typed( yourCity, {
-      strings: ["Your city"],
+    const typerOne = new Typed(yourName, {
+      strings: ["Your name"],
       typeSpeed: 100,
       loop: true
     });
+    yourName.addEventListener("focus", stopAndClear);
+    console.log(typerOne)
 
-    yourCity.addEventListener("focus", set_second_clicked);
 
-  function set_second_clicked() {
-    console.log(typerTwo.showCursor)
-    document.querySelectorAll(".typed-cursor")[1].style.display = "none";
-    typerTwo.loop = false;
-    console.log(typerTwo.showCursor)
+    function stopAndClear() {
+      const self = this;
+      clickCount++;
+      typerOne.stop();
+      yourName.innerHTML = "     ";
+      //yourName.innerHTML = '       ';
+
+      yourName.addEventListener("blur", stopFirstCursor);
+
+      if (clickCount === 1) {
+        yourCity.innerText = "";
+        self.typerTwo = new Typed( yourCity, {
+          strings: ["Your city"],
+          typeSpeed: 100,
+          loop: true
+        });
+      };
+
+      function stopFirstCursor() {
+        document.querySelectorAll(".typed-cursor")[0].style.display = "none";
+      }
+
+      yourCity.addEventListener("focus", setSecondClicked);
+
+
+      function setSecondClicked() {
+        self.typerTwo.stop();
+        yourCity.innerText = "      ";
+        yourCity.addEventListener("blur", stopSecondCursor);
+
+        function stopSecondCursor() {
+          document.querySelectorAll(".typed-cursor")[1].style.display = "none";
+        }
+      }
+    }
   }
-
-  }
-
-
-}};
+};
 
 export { loadDynamicBannerText };
