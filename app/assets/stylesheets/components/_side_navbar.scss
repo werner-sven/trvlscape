@@ -2,13 +2,24 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 
-  top: (50%-10%);
+  top: (27%);
   height: 10%;
   width: 150px;
   border-radius: 5px;
   float: right;
   position: sticky;
-  margin-right: 1.5%;
+  margin: 10% 1.5% 10% 0;
+
+  a{
+    text-decoration: none;
+    color: #b8b8b8;
+    opacity: 0.7;
+
+  }
+
+  a:hover{
+    color: black;
+  }
 }
 
 .nav-side-step{
@@ -28,3 +39,10 @@
   font-weight: 600;
   margin-left: 10px;
 }
+
+
+.active{
+  color: black;
+  opacity: 1;
+}
+
