@@ -13,6 +13,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.start_time = DateTime.parse("#{params[:booking]["start_date"]} #{params[:booking]["start_time"]}")
     @booking.budget_pp = params[:budget_pp].to_i
+
+    @booking.set_price
+
     @booking.number_traveller.times do
       @booking.new_traveller
     end
