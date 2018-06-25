@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create, :edit, :update, :show, :traveller, :confirmation]
+  skip_before_action :authenticate_user!, only: [:new, :create, :traveller]
   before_action :set_booking, only: [:show, :edit, :update, :traveller]
 
   def new
@@ -21,6 +21,9 @@ class BookingsController < ApplicationController
     end
     @booking.user = current_user
     @booking.save
+    unless current_user
+      session[:last_booking_id] = @booking.id
+    end
 
     redirect_to traveller_booking_path(@booking)
   end
@@ -45,6 +48,10 @@ class BookingsController < ApplicationController
   end
 
   def show
+    if session[:last_booking_id]
+      @booking.user = current_user
+      @booking.save!
+    end
   end
 
   def traveller
