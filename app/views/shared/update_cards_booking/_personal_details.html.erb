@@ -34,7 +34,11 @@
                   <div class="item">
                     <% end %>
                     <div class="booking-step6-personal-header">
+                      <% if i == 0 %>
+                      <h3>Traveller <%= (i + 1)  %></h3><p>(Paying Traveller)</p>
+                      <% else %>
                       <h3>Traveller <%= (i + 1)  %></h3>
+                      <% end %>
                     </div>
                     <div class="booking-step6-personal-form">
                       <div class="booking-step6-personal-form-leftcol">
