@@ -1,7 +1,26 @@
 .base-container {
-  max-width: 1140px;
-  margin: 0 auto;
+    margin: 0 auto;
+  }
+
+@media (min-width: 800px) {
+  .base-container {
+    max-width: 1140px;
+    min-height: calc(100vh - 170px)
+  }
 }
+@media (max-width: 800px) {
+  .base-container {
+    max-width: 600px;
+    min-height: calc(100vh - 170px)
+  }
+  img {
+    display: none;
+  }
+}
+
+
+
+
 
 .base-container--bookings {
   //Change value later

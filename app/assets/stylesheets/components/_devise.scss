@@ -1,0 +1,27 @@
+.devise-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 170px);
+
+}
+
+.devise-content-container {
+  background-color: white;
+  padding: 3%;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.form-button {
+  height: 50px;
+  width: 100px;
+  background-color: $devise-button;
+  color: white;
+  border-radius: 3px;
+  margin-bottom: 2%;
+}
+
+.image-devise {
+    background-image: image-url("Banner_backpack_orange.jpg");
+}
