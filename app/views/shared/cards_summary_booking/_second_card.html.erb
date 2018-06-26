@@ -1,6 +1,6 @@
 <div class="grid-content-right-second">
   <div class="container-summary-content">
-    <div class="style-heading"> <span>Personal Details </> </div>
+    <div class="style-heading"> <span>Personal Details </span> </div>
       <div class="style-body">
 
         <span>Name: Add User Fırst and Last Name later </span><br>
@@ -16,24 +16,33 @@
            </div>
          </select>
        </div> -->
-       <div class="popup-container">
-       <% booking.travellers.each_with_index do |traveller,index| %>
-         <div class="box"> <a class="button" href="#popup<%= index %>"><%= traveller.first_name + ' ' + traveller.last_name  %></a>
-         </div>
-         <div id="popup<%= index %>" class="overlay">
-          <div class="popup">
-           <span class="center-heading">Traveller Details </span>
-           <a class="close" href="#modal-anchor">&times;</a>
-           <p>Name:<%= traveller.first_name + ' ' + traveller.last_name %></p>
-           <p>Birtday:<%= traveller.birth_date %></p>
-           <p>Passport Number:<%= traveller.passport_number %></p>
-           <p>Nationality:<%= traveller.nationality %></p>
-         </div>
-       </div>
-      <% end %>
-     </div>
-   </div>
- </div>
+
+
+
+
+
+        <div class="popup-container flex">
+          <div class="row">
+            <% booking.travellers.each_with_index do |traveller,index| %>
+            <div class="col-xs-6 col-md-6 ">
+              <div class="box"> <a class="button" href="#popup<%= index %>"><%= traveller.first_name + ' ' + traveller.last_name  %></a>
+              </div>
+              </div>
+              <div id="popup<%= index %>" class="overlay">
+                <div class="popup">
+                 <span class="center-heading">TRAVELLER DETAILS </span>
+                 <a class="close" href="#modal-anchor">&times;</a>
+                 <p>Name:   <%= traveller.first_name + ' ' + traveller.last_name %></p>
+                 <p>Birtday:   <%= traveller.birth_date %></p>
+                 <p>Passport Number:    <%= traveller.passport_number %></p>
+                 <p>Nationality:   <%= traveller.nationality %></p>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+  </div>
 </div>
-</div>
+
 
