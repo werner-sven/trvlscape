@@ -8,9 +8,9 @@ function loadDynamicBannerText() {
 
   if (yourName != null) {
 
-    window.setTimeout(fadeValueProposition, 3000);
+    //window.setTimeout(fadeValueProposition, 3000);
 
-    window.setTimeout(()=>{}, 1000)
+    //window.setTimeout(()=>{}, 1000)
 
     const typerOne = new Typed(yourName, {
       strings: ["Your name"],

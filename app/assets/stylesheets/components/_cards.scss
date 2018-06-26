@@ -6,6 +6,14 @@
 
 margin-top: 12vh;
 
+  @media screen and (max-width: 767px) {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 0;
+  }
+
   .card-text {
   height: 340px;
   display: flex;
@@ -103,6 +111,10 @@ margin-top: 12vh;
     left: 6px;
     z-index: -1;
   }
+}
+
+.padding-left-0 {
+  padding-left: 0;
 }
 
 // Cards Testimonials
