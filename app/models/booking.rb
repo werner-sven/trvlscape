@@ -23,4 +23,14 @@ class Booking < ApplicationRecord
   # def delete_traveller
   #   self.traveller.last.destroy
   # end
+
+  def send_confirmation_sms
+
+    TwilioService.new("booking.phone").confirmation
+
+  end
+
+  def send_weather_sms
+  end
+
 end
