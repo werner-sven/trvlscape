@@ -30,7 +30,13 @@
                 </div>
               </div>
             </div>
-            <input class="counter-input-style" type="number" id="form-traveller-number" min="1"value="1" name="booking[number_traveller]" />
+            <input class="counter-input-style" type="number" id="form-traveller-number" min="1"
+                    <%= if (params[:booking] && (params[:booking][:number_traveller]))
+                          then "value=#{params[:booking][:number_traveller]}"
+                        else
+                          "value=1"
+                        end%>
+                    name="booking[number_traveller]" />
             <div class="value-button" id="form-button-increase" value="Increase Value">
               <div class="counter-title">
                 <div class="counter">

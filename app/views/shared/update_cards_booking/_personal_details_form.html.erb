@@ -4,12 +4,15 @@
 <div class="booking-step6-personal-form">
  <div class="booking-step6-personal-form-leftcol">
 
-  <input id="title" type="text" value="<%=@booking.travellers[i].title %>" name="traveller_<%= i %>[title]" placeholder="">
+  <input id="title" type="text" placeholder="Mrs" name="traveller_<%= i %>[title]"
+        <%="value=#{params[:traveller_[i]][:title]}" if (params[:traveller_[i]] && params[:traveller_[i]][:title] && params[:traveller_[i]][:title]) !="" %> >
 
-  <input id="first_name"type="text" name='traveller_<%=i%>[first_name]' placeholder="First Name">
-
+  <input id="first_name"type="text" name='traveller_<%=i%>[first_name]' placeholder="First Name"
+        <%="value=#{params[:traveller_[i]][:first_name]}" if (params[:traveller_[i]] && params[:traveller_[i]][:first_name] && params[:traveller_[i]][:first_name]) !="" %>>
   <input id="" type="text" name='traveller_<%=i%>[passport_i]' placeholder="Passport i" ">
+        <%="value=#{params[:traveller_[i]][:passport]}" if (params[:traveller_[i]] && params[:traveller_[i]][:passport] %>
   <label for="passport_expiration">Passport expiry date</label>
+
   <input id="passport_expiration" type="date" name='traveller_<%=i%>[passport_expiration]' placeholder="Passport Expiration">
 </div>
 <div class="booking-step6-personal-form-rightcol">
@@ -19,3 +22,5 @@
   <input id="birth_date" type="date" name='traveller_<%=i%>[birth_date]' placeholder="Birth date">
 </div>
 </div>
+
+"traveller_#{traveller_index}".to_sym).permit(:title, :first_name, :last_name, :nationality, :birth_date, :passport_number, :passport_expiration
