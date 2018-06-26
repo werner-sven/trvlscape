@@ -11,9 +11,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.start_time = DateTime.parse("#{params[:booking]["start_date"]} #{params[:booking]["start_time"]}")
+    if (params[:booking]["start_date"] && params[:booking]["start_time"] && params[:booking]["start_date"] != "")
+      @booking.start_time = DateTime.parse("#{params[:booking]["start_date"]} #{params[:booking]["start_time"]}")
+    end
     @booking.budget_pp = params[:budget_pp].to_i
-
     @booking.set_price
 
     @booking.number_traveller.times do
@@ -24,27 +25,31 @@ class BookingsController < ApplicationController
     unless current_user
       session[:last_booking_id] = @booking.id
     end
+    if @booking.save
 
-    redirect_to traveller_booking_path(@booking)
+      flash[:alert].clear if flash[:alert]
+      redirect_to traveller_booking_path(@booking)
+    else
+      flash.now[:alert] = @booking.errors.full_messages.join(", ")
+      render :new
+    end
+
   end
 
   def edit
   end
 
   def update
-    #here we need an if_statement that executes different code depending which side we edit (booking vs traveller)
-
-    #execute this part only when traveller_param[for traveller 0] exists (or better when beeing redirected from booking/:id/traveller)
-
     @booking.travellers.each_with_index do |traveller, index|
       traveller.update(traveller_params(index))
     end
-    # if @booking.travellers.any?{|t| t.errors}
-    #   flash[:alert] = @booking.travellers.map {|t| t.errors.full_messages}.flatten.join(",")
-    #   render :traveller
-    # else
+    if @booking.travellers.any?{|t| t.errors}
+       flash.now[:alert] = @booking.travellers.map {|t| t.errors.full_messages}.flatten.join(",")
+       render :traveller
+    else
+      flash[:alert].clear
       redirect_to booking_path(@booking)
-    # end
+    end
   end
 
   def show

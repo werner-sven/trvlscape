@@ -18,8 +18,20 @@
         </div>
 
         <div class="slidecontainer padding-right-10 padding-left-10 form-grouped grid-budget-slider">
-          <label class="slider-output slider-heading" for="max-price">Budget per person: 300</label>
-          <input name="budget_pp" type="range" min="150" max="1000" value="300" class="slider" id="myRange">
+          <label class="slider-output slider-heading" for="max-price">
+            Budget per person: <%= if (params[:budget_pp])
+                          then "#{params[:budget_pp]}"
+                        else
+                          "300"
+                          end%>
+          </label>
+          <input name="budget_pp" type="range" min="150" max="1000"  class="slider" id="myRange"
+                    <%= if (params[:budget_pp])
+                          then "value=#{params[:budget_pp]}"
+                        else
+                          "value=300"
+                          end%>
+               >
         </div>
 
         <div class="grid-budget-accommodation">
@@ -29,7 +41,7 @@
                 <div class="type-container">
                   <div class="radio-trip-type-group">
                     <div  class="input-container radio-button-accommodation">
-                      <input type="radio" name="booking[accommodation_type]" class="radio-button" value="hostel" id="button-hostel">
+                      <input type="radio" name="booking[accommodation_type]" class="radio-button" value="Hostel" id="button-hostel" <%="checked" if params[:booking] && (params[:booking]["accommodation_type"] == "Hostel") %>>
                       <div class="radio-title">
                         <div class="icon adventure-icon">
                           <svg fill="#000000" height="24" viewBox="0 0 512 512" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +63,7 @@
                 <div class="type-container">
                   <div class="radio-trip-type-group">
                     <div  class="input-container radio-button-accommodation">
-                      <input type="radio" name="booking[accommodation_type]" class="radio-button" value="Bed and Breakfast" id="button-bnb">
+                      <input type="radio" name="booking[accommodation_type]" class="radio-button" value="Bed and Breakfast" id="button-bnb" <%="checked" if params[:booking] && (params[:booking]["accommodation_type"] == "Bed and Breakfast") %>>
                       <div class="radio-title">
                         <div class="icon adventure-icon">
                           <svg fill="#000000" height="40" viewBox="0 0 512 512" width="40" xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +109,7 @@
                 <div class="type-container">
                   <div class="radio-trip-type-group">
                     <div  class="input-container radio-button-accommodation">
-                      <input type="radio" name="booking[accommodation_type]" class="radio-button" value="Hotel" id="button-hotel">
+                      <input type="radio" name="booking[accommodation_type]" class="radio-button" value="Hotel" id="button-hotel" <%="checked" if params[:booking] && (params[:booking]["accommodation_type"] == "Hotel") %>>
                       <div class="radio-title">
                         <div class="icon adventure-icon">
                           <svg fill="#000000" height="24" viewBox="0 0 512 512" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +141,7 @@
                 <div class="type-container">
                   <div class="radio-trip-type-group">
                     <div  class="input-container radio-button-accommodation">
-                      <input type="radio" name="booking[accommodation_type]" class="radio-button" value="Luxury Hotel" id="button-luxus-hotel">
+                      <input type="radio" name="booking[accommodation_type]" class="radio-button" value="Luxury Hotel" id="button-luxus-hotel" <%="checked" if params[:booking] && (params[:booking]["accommodation_type"] == "Luxury Hotel") %>>
                       <div class="radio-title">
                         <div class="icon adventure-icon">
                           <svg fill="#000000" height="24" viewBox="0 0 512 512" width="24" xmlns="http://www.w3.org/2000/svg">
