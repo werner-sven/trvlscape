@@ -7,7 +7,7 @@ class Traveller < ApplicationRecord
   validates :passport_number, presence: true, length: {minimum: 2, maximum: 300}, on: :update
 
 
-  # # add rest of validations later so testing is easier
+  # add rest of validations later so testing is easier
   validates :passport_expiration, presence: true, on: :update
   validate :passport_expiration_cannot_be_in_the_past, on: :update
   validates :nationality, presence: true, on: :update

@@ -43,11 +43,11 @@ class BookingsController < ApplicationController
     @booking.travellers.each_with_index do |traveller, index|
       traveller.update(traveller_params(index))
     end
-    if @booking.travellers.any?{|t| t.errors}
+    if @booking.travellers.any?{|t| t.errors.messages != {} }
        flash.now[:alert] = @booking.travellers.map {|t| t.errors.full_messages}.flatten.join(",")
        render :traveller
     else
-      flash[:alert].clear
+      flash[:alert].clear if flash[:alert]
       redirect_to booking_path(@booking)
     end
   end
