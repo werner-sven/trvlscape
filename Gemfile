@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'money-rails'
 gem 'stripe'
+gem 'twilio-ruby'
 
 
 group :development do
