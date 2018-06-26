@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 170px);
+  min-height: calc(100vh - 70px);
 
 }
 
@@ -11,6 +11,7 @@
   padding: 3%;
   padding-right: 5%;
   padding-left: 5%;
+  opacity: 0.98;
 }
 
 .form-button {
@@ -23,5 +24,9 @@
 }
 
 .image-devise {
-    background-image: image-url("Banner_backpack_orange.jpg");
+  background-image: image-url("italy.jpg");
+  filter: grayscale(40%);
+  background-size: cover !important;
+  position: relative;
+  background-position: center;
 }
