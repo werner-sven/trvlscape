@@ -1,0 +1,47 @@
+// .flatpickr-date {
+  #orange-picker {
+    .flatpickr-calendar {
+      width: 346px !important;
+    }
+
+    .flatpickr-weekdays {
+      width: 346px !important;
+    }
+
+    .flatpickr-days {
+      width: 346px !important;
+    }
+
+    .dayContainer {
+      min-width: 346px !important;
+      height: 200px;
+    }
+  }
+
+    .flatpickr-next-month {
+      background-color: $orange;
+    }
+
+    .flatpickr-months {
+      background-color: $orange !important;
+
+      .flatpickr-month {
+      background-color: $orange !important;
+      }
+    }
+
+    .flatpickr-weekdays {
+      background-color: $orange !important;
+    }
+
+    .flatpickr-weekday {
+      background-color: $orange !important;
+      color: white !important;
+    }
+
+    .selected {
+      background-color: $orange !important;
+      color: white !important;
+      border: none !important;
+    }
+

@@ -38,17 +38,19 @@
                     </div>
                     <div class="booking-step6-personal-form">
                       <div class="booking-step6-personal-form-leftcol">
-                        <input id="title" type="text" value="<%=@booking.travellers[i].title %>" name="traveller_<%= i %>[title]" placeholder="Mr">
-                        <input id="first_name"type="text" name='traveller_<%=i%>[first_name]' placeholder="First Name">
-                        <input id="" type="text" name='traveller_<%=i%>[passport_number]' placeholder="Passport Number" ">
+                        <div style="display: flex; justify-content: space-between;"">
+                          <input id="title" type="text" value="<%=@booking.travellers[i].title %>" name="traveller_<%= i %>[title]" placeholder="Mr" class="input-style input-style:focus" >
+                          <input id="first_name"type="text" name='traveller_<%=i%>[first_name]' placeholder="First Name" class="input-style input-style:focus" >
+                        </div>
+                        <input id="" type="text" name='traveller_<%=i%>[passport_number]' placeholder="Passport Number" class="input-style input-style:focus" >
                         <label for="passport_expiration">Passport expiry date</label>
-                        <input id="passport_expiration" type="date" name='traveller_<%=i%>[passport_expiration]' placeholder="Passport Expiration">
+                        <input id="passport_expiration" type="date" name='traveller_<%=i%>[passport_expiration]' placeholder="Enter your passport number" class="passportpickr input-style input-style:focus" >
                       </div>
                       <div class="booking-step6-personal-form-rightcol">
-                        <input type="text" name='traveller_<%=i%>[last_name]' placeholder="Last Name">
-                        <input type="text" name='traveller_<%=i%>[nationality]' placeholder="Nationality">
+                        <input type="text" name='traveller_<%=i%>[last_name]' placeholder="Last Name" class="input-style input-style:focus">
+                        <input type="text" name='traveller_<%=i%>[nationality]' placeholder="Nationality" class="input-style input-style:focus">
                         <label for="birth_date">Birth date</label>
-                        <input id="birth_date" type="date" name='traveller_<%=i%>[birth_date]' placeholder="Birth date">
+                        <input id="birth_date" type="date" name='traveller_<%=i%>[birth_date]' placeholder="Enter your birth date" class="birthpickr">
                       </div>
                     </div>
                   </div>
