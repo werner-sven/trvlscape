@@ -1,6 +1,7 @@
 // all Buttons below
 
 .button {
+display: inline-block;
 
 }
 
@@ -34,7 +35,7 @@
   z-index: 1;
   border-radius: 6px;
   border: 0px;
-  opacity: .9;
+  opacity: 1;
 
   &:hover {
     opacity: 1;

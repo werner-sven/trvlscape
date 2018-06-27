@@ -1,5 +1,5 @@
 .summary-container {
-  height: 130vh;
+  min-height: 140vh;
   width: 100vw;
   // background-color: pink;
 
@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 50% 15% 35%;
     grid-template-rows: 15% 25% 25% 25% 10%;
-    min-height: 130vh;
+    min-height: 140vh;
     width: 100vw;
   }
 
@@ -192,8 +192,8 @@
       align-items: center;
 
       span {
-        font-size: 40px;
-        font-weight: 700;
+        font-size: 30px;
+        font-weight: 500;
       }
     }
   }
@@ -221,9 +221,11 @@
 
 
 
-
-
-
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 

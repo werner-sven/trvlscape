@@ -34,15 +34,30 @@
                   <div class="item">
                     <% end %>
                     <div class="booking-step6-personal-header">
+                      <% if i == 0 %>
+                      <h3>Traveller <%= (i + 1)  %></h3>  <p>(Paying Traveller)</p>
+                      <% else %>
                       <h3>Traveller <%= (i + 1)  %></h3>
+                      <% end %>
                     </div>
                     <div class="booking-step6-personal-form">
                       <div class="booking-step6-personal-form-leftcol">
-                        <div style="display: flex; justify-content: space-between;"">
-                          <input id="title" type="text" value="<%=@booking.travellers[i].title %>" name="traveller_<%= i %>[title]" placeholder="Mr" class="input-style input-style:focus" >
-                          <input id="first_name"type="text" name='traveller_<%=i%>[first_name]' placeholder="First Name" class="input-style input-style:focus" >
+
+                 <div class="inline input-style input-style:focus">
+                    <div class="styled-select slate">
+                           <select id="title" name="traveller_<%= i %>[title]">
+                       <option value="Mrs" selected="selected">Mrs</option>
+                       <option value="Mr" >Mr</option>
+                       <option value="Miss">Miss</option>
+                       <option value="Ms">Ms</option>
+                       <option value="Dr">Dr</option>
+                     </select>
+                   </div>
+                   
+                     <input id="first_name"type="text" name='traveller_<%=i%>[first_name]' placeholder="First Name" class="input-style input-style:focus" >
                         </div>
                         <input id="" type="text" name='traveller_<%=i%>[passport_number]' placeholder="Passport Number" class="input-style input-style:focus" >
+
                         <label for="passport_expiration">Passport expiry date</label>
                         <input id="passport_expiration" type="date" name='traveller_<%=i%>[passport_expiration]' placeholder="Enter your passport number" class="passportpickr input-style input-style:focus" >
                       </div>

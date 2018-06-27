@@ -16,7 +16,14 @@
               <h3>Start your Trip from</h3>
             </div>
             <div class="col-xs-12 col-md-7">
-              <input type="text" name="booking[origin]" value="<%=params[:city]%>" placeholder="e.g. Barcelona" class="input-field-booking-origin input-style input-style:focus">
+
+              <input type="text" name="booking[origin]" value="<%=params[:city]%>" placeholder="e.g. Barcelona" class="input-field-booking-origin input-style input-style:focus"
+                                    <%=if (params[:city] && (params[:city] != ""))
+                            then "value=#{params[:city]}"
+                          elsif (params[:booking] && params[:booking][:origin])
+                            then "value=#{params[:booking][:origin]}"
+                          end %>
+              >
             </div>
           </div>
 
@@ -29,7 +36,17 @@
               <h3>Departure Date</h3>
             </div>
             <div class="col-xs-12 col-md-7">
-              <input type="date" name="booking[start_date]" class="input-field-booking-date datepicker" placeholder="Enter your departure date">
+
+             
+ <input type="date" name="booking[start_date]" class="input-field-booking-date datepicker" placeholder="Enter your departure date"
+                      <%= if (params[:booking] && params[:booking][:start_date] == "")
+                            then "value=#{Time.now.strftime('%Y-%m-%d')}"
+                          elsif (params[:booking] && params[:booking][:start_date] != "")
+                            then "value=#{params[:booking][:start_date].to_date.strftime('%Y-%m-%d')}"
+                          else
+                            "value=#{Time.now.strftime('%Y-%m-%d')}"
+                          end %>
+              >
             </div>
           </div>
 
@@ -47,9 +64,9 @@
                     <div class="type-container">
                       <div class="radio-trip-type-group">
                         <div class="input-container radio-button-departure-time">
-                          <input type="radio" name="booking[start_time]" class="radio-button" value="9">
+                          <input type="radio" name="booking[start_time]" class="radio-button" value="9" <%="checked" if params[:booking] && (params[:booking]["start_time"] == "9") %>>
                           <div class="radio-title">
-                            <label for="departure_time" class="radio-title-label">9 AM</label>
+                            <label for="departure_time" class="radio-title-label" >9 AM</label>
                           </div>
                         </div>
                       </div>
@@ -57,7 +74,7 @@
                     <div class="type-container">
                       <div class="radio-trip-type-group">
                         <div class="input-container radio-button-departure-time">
-                          <input type="radio" name="booking[start_time]" class="radio-button" value="12">
+                          <input type="radio" name="booking[start_time]" class="radio-button" value="12" <%="checked" if params[:booking] && (params[:booking]["start_time"] == "12") %>>
                           <div class="radio-title">
                             <label for="departure_time" class="radio-title-label">12 AM</label>
                           </div>
@@ -67,7 +84,7 @@
                     <div class="type-container">
                       <div class="radio-trip-type-group">
                         <div class="input-container radio-button-departure-time">
-                          <input type="radio" name="booking[start_time]" class="radio-button" value="15">
+                          <input type="radio" name="booking[start_time]" class="radio-button" value="15" <%="checked" if params[:booking] && (params[:booking]["start_time"] == "15") %>>
                           <div class="radio-title">
                             <label for="departure_time" class="radio-title-label">3 PM</label>
                           </div>
@@ -77,7 +94,7 @@
                     <div class="type-container">
                       <div class="radio-trip-type-group">
                         <div class="input-container radio-button-departure-time">
-                          <input type="radio" name="booking[start_time]" class="radio-button" value="18">
+                          <input type="radio" name="booking[start_time]" class="radio-button" value="18" <%="checked" if params[:booking] && (params[:booking]["start_time"] == "18") %>>
                           <div class="radio-title">
                             <label for="departure_time" class="radio-title-label">6 PM</label>
                           </div>
