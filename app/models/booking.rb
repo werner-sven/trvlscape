@@ -30,12 +30,19 @@ class Booking < ApplicationRecord
     self.price_cents = ( self.budget_pp * self.number_traveller * 100 )
     self.save
   end
-
-   def send_confirmation_sms
-    TwilioService.new(self.user.phone).confirmation
-  end
-
-  def send_weather_sms
+  
+  def match_to_package
+    packages = Package.all
+    if self.climate != "surprise"
+      packages = packages.select {|pack| (pack.climate == self.climate) }
+    end
+    if self.type_id != 4
+      packages = packages.select {|pack| (pack.type_id == self.type_id) }
+    end
+    self.package = packages.sample
+    self.package.accommodation_type = self.accommodation_type
+    self.package.start_date = self.start_time
+    self.package.save
   end
 
 

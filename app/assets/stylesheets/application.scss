@@ -4,6 +4,7 @@
 @import "config/bootstrap_variables";
 @import "config/containers";
 
+
 // External libraries
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -11,6 +12,7 @@
 @import "font-awesome";
 
 // Your CSS partials
+@import "config/general";
 @import "components/index";
 @import "pages/index";
 @import "components/cards"

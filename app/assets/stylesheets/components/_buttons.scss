@@ -37,8 +37,9 @@ display: inline-block;
   border: 0px;
   opacity: 1;
 
+
   &:hover {
-    opacity: 1;
+    transform: scale(1.025, 1.025);
 
   }
 }

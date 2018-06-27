@@ -17,6 +17,8 @@ class BookingsController < ApplicationController
     @booking.budget_pp = params[:budget_pp].to_i
     @booking.set_price
 
+    @booking.match_to_package
+
     @booking.number_traveller.times do
       @booking.new_traveller
     end
@@ -44,7 +46,7 @@ class BookingsController < ApplicationController
       traveller.update(traveller_params(index))
     end
     if @booking.travellers.any?{|t| t.errors.messages != {} }
-       flash.now[:alert] = @booking.travellers.map {|t| t.errors.full_messages}.flatten.join(",")
+       flash.now[:alert] = @booking.travellers.map {|t| t.errors.full_messages}.flatten.join(", ")
        render :traveller
     else
       flash[:alert].clear if flash[:alert]
