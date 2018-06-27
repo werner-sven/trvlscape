@@ -348,6 +348,45 @@ margin-top: 12vh;
     width: 100%;
   }
 
+// Booking new second card
+
+.content-container-grid--card-2 {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .grid-element-1 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    display: flex;
+    // justify-content: bottom;
+    // align-items: right;
+    background-color: red;
+  }
+
+  .grid-element-1-2 {
+
+  }
+
+  .grid-element-2 {
+
+  }
+
+  .grid-element-2-2 {
+
+  }
+
+  .grid-element-3 {
+
+  }
+
+  .grid-element-3-2 {
+
+  }
+
+// Booking new third card
+
   .image-container-people-counter {
     height: 90%;
     width: 60%;
