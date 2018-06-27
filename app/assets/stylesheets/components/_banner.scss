@@ -119,7 +119,8 @@
 .banner-booking {
   color: white;
   text-align: center;
-  height: 400px;
+  min-height: 450px;
+  height: 45vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -172,3 +173,5 @@
 .banner-booking-summary {
 
 }
+
+
