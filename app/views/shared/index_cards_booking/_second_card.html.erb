@@ -16,8 +16,9 @@
               <h3>Start your Trip from</h3>
             </div>
             <div class="col-xs-12 col-md-7">
-              <input type="text" name="booking[origin]" class="input-field-booking-origin" placeholder="e.g. Barcelona"
-                      <%=if (params[:city] && (params[:city] != ""))
+
+              <input type="text" name="booking[origin]" value="<%=params[:city]%>" placeholder="e.g. Barcelona" class="input-field-booking-origin input-style input-style:focus"
+                                    <%=if (params[:city] && (params[:city] != ""))
                             then "value=#{params[:city]}"
                           elsif (params[:booking] && params[:booking][:origin])
                             then "value=#{params[:booking][:origin]}"
@@ -35,7 +36,9 @@
               <h3>Departure Date</h3>
             </div>
             <div class="col-xs-12 col-md-7">
-              <input type="date" name="booking[start_date]" class="input-field-booking-date"
+
+             
+ <input type="date" name="booking[start_date]" class="input-field-booking-date datepicker" placeholder="Enter your departure date"
                       <%= if (params[:booking] && params[:booking][:start_date] == "")
                             then "value=#{Time.now.strftime('%Y-%m-%d')}"
                           elsif (params[:booking] && params[:booking][:start_date] != "")
@@ -111,4 +114,7 @@
       </div>
     </div>
   </div>
+</div>
+
+<div id="orange-picker">
 </div>
