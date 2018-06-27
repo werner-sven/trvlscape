@@ -215,6 +215,7 @@ margin-top: 12vh;
    padding-top: 217px;
    font-weight:bolder;
    color: #FFFFFF;
+  }
 
 }
 
@@ -227,7 +228,6 @@ margin-top: 12vh;
 .card-description--red{
   height:500px;
 }
-  }
   .card-description--yellow:hover:after {
   content: attr(data-hover);
   font-size: 18px;

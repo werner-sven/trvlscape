@@ -23,10 +23,6 @@
 
 .hiw{
 
-  color: $gray;
-  padding-left: 2%;
-  padding-right: 2%;
-
   h2 {
     font-weight: 800;
     font-size: 70px;
@@ -49,10 +45,6 @@
     font-size: 42px;
   }
 
-  .hiw-orange {
-    color: $orange;
-    font-weight: 900;
-  }
 
   #hiw-destination-unknown {
     background-image: image-url("destination_unknown_hiw_cockpit.jpg");
@@ -75,3 +67,25 @@
     background-size: cover;
   }
 }
+
+.testimonials{
+  h2 {
+    font-weight: 800;
+    font-size: 70px;
+    margin-bottom:0;
+    margin-top: 15vh;
+  }
+
+  h3 {
+    margin-top: 10px;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+}
+
+  .point-orange {
+    color: $orange;
+    font-weight: 900;
+  }
