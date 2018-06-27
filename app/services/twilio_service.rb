@@ -17,11 +17,11 @@ class TwilioService
     )
   end
 
-  def weather
+  def weather(body)
     @client.messages.create(
       from: @from,
       to: @to,
-      body: ""
+      body: body
     )
   end
 end

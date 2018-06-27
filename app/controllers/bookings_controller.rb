@@ -67,7 +67,7 @@ class BookingsController < ApplicationController
     boo = Booking.find(params[:id])
     boo.package = Package.find(1)
     boo.save
-    WheatherService.new(Booking.find(params[:id]).package).get_weather
+    weather = WheatherService.new(Booking.find(params[:id]).package).get_weather
   end
 
   private
