@@ -67,17 +67,12 @@ class BookingsController < ApplicationController
 
   def confirmation
     booking = Booking.find(params[:id])
-    booking.package = Package.find(1)
-    booking.save
-
     sms = TwilioService.new(booking.user.phone)
     sms.confirmation(booking.travellers[0])
     weather = WheatherService.new(Booking.find(params[:id]).package).get_weather
 
     weather_text = "Hi #{booking.travellers[0].first_name}, your trip is just 5 days away! As a little headsup, your weather will be #{weather.description}. You are expected to have #{weather.expected_temp}°C and #{weather.humidity}% humidity."
     sms.weather(weather_text)
-
-
 
   end
 
