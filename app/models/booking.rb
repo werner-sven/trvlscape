@@ -30,18 +30,31 @@ class Booking < ApplicationRecord
     self.price_cents = ( self.budget_pp * self.number_traveller * 100 )
     self.save
   end
-  
+
    def send_confirmation_sms
     TwilioService.new("booking.phone").confirmation
   end
 
   def send_weather_sms
   end
-  
+
+  def match_to_package
+    packages = Package.all
+    if self.climate != "surprise"
+      packages = packages.select {|pack| (pack.climate == self.climate) }
+    end
+    if self.type_id != 4
+      packages = packages.select {|pack| (pack.type_id == self.type_id) }
+    end
+    self.package = packages.sample
+    self.package.accommodation_type = self.accommodation_type
+    self.package.start_date = self.start_time
+    self.package.save
+  end
+
   private
     def start_time_cannot_be_in_the_past
       errors.add(:start_time, "can't be in the past") if
         !start_time.blank? and start_time < Date.today
     end
-  
 end
