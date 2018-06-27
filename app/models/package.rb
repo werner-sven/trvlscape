@@ -4,4 +4,8 @@ class Package < ApplicationRecord
   belongs_to :type
 
   monetize :price_cents
+
+  def get_wheather
+    WheatherService.new
+  end
 end
