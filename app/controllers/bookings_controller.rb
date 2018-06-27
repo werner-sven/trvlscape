@@ -17,6 +17,8 @@ class BookingsController < ApplicationController
     @booking.budget_pp = params[:budget_pp].to_i
     @booking.set_price
 
+    @booking.match_to_package
+
     @booking.number_traveller.times do
       @booking.new_traveller
     end
