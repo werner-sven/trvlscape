@@ -9,11 +9,11 @@ class TwilioService
     @to = to
   end
 
-  def confirmation
+  def confirmation(user)
     @client.messages.create(
       from: @from,
       to: @to,
-      body: "Hello {current_user.name}. Your surprise trip is fully booked."
+      body: "Hello {user.first_name}. Your surprise trip is fully booked. Just kick back and relax."
     )
   end
 

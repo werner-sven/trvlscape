@@ -3,8 +3,13 @@
 
 class WheatherService
 
+  attr_reader :expected_temp, :humidity, :description
+
   def initialize(travel_package)
     @url = "http://api.openweathermap.org/data/2.5/forecast?lat=#{travel_package.lat}&lon=#{travel_package.long}&APPID=#{ENV['WEATHER_API_KEY']}"
+    @expected_temp = nil
+    @humidity = nil
+    @description = nil
   end
 
   def get_weather
@@ -23,9 +28,11 @@ class WheatherService
         desired_weather = hash
       end
     end
-    expected_temp = (desired_weather["main"]["temp"]- 273.15).round
-    humidity = desired_weather["main"]["humidity"].round
-    description = desired_weather["weather"][0]["description"]
+    @expected_temp = (desired_weather["main"]["temp"]- 273.15).round
+    @humidity = desired_weather["main"]["humidity"].round
+    @description = desired_weather["weather"][0]["description"]
+
+
 
     raise
   end
