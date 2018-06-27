@@ -468,7 +468,7 @@ margin-top: 12vh;
     display: flex;
     justify-content: center;
     align-items: left;
-    padding-left: 10%;
+    padding-left: 12%;
   }
 
   .grid-heading-preferences-second-right {
@@ -492,6 +492,14 @@ margin-top: 12vh;
     justify-content: left;
     align-items: center;
     padding-left: 15%;
+  }
+
+  .grid-pop-up-last {
+    grid-row: 4 / span 1;
+    grid-column: 3 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 }
