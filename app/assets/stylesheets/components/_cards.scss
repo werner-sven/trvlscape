@@ -297,7 +297,8 @@ margin-top: 12vh;
 .counter-container {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 63%;
+  margin-left: 13px;
 }
 
 .text-container {
@@ -347,6 +348,45 @@ margin-top: 12vh;
     height: 100%;
     width: 100%;
   }
+
+// Booking new second card
+
+.content-container-grid--card-2 {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .grid-element-1 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    display: flex;
+    // justify-content: bottom;
+    // align-items: right;
+    background-color: red;
+  }
+
+  .grid-element-1-2 {
+
+  }
+
+  .grid-element-2 {
+
+  }
+
+  .grid-element-2-2 {
+
+  }
+
+  .grid-element-3 {
+
+  }
+
+  .grid-element-3-2 {
+
+  }
+
+// Booking new third card
 
   .image-container-people-counter {
     height: 90%;
@@ -428,7 +468,7 @@ margin-top: 12vh;
     display: flex;
     justify-content: center;
     align-items: left;
-    padding-left: 10%;
+    padding-left: 12%;
   }
 
   .grid-heading-preferences-second-right {
@@ -452,6 +492,14 @@ margin-top: 12vh;
     justify-content: left;
     align-items: center;
     padding-left: 15%;
+  }
+
+  .grid-pop-up-last {
+    grid-row: 4 / span 1;
+    grid-column: 3 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 }
