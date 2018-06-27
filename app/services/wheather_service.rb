@@ -31,9 +31,8 @@ class WheatherService
     @expected_temp = (desired_weather["main"]["temp"]- 273.15).round
     @humidity = desired_weather["main"]["humidity"].round
     @description = desired_weather["weather"][0]["description"]
+    return self
 
 
-
-    raise
   end
 end
