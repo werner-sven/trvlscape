@@ -1,0 +1,119 @@
+.sum-container {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: image-url("street.jpg");
+  background-size: cover !important;
+  min-height: 100vh;
+}
+
+.sum-booking {
+  min-height: 70vh;
+  max-width: 40%;
+  background-color: $snowwhite;
+  padding: 3%;
+  display: flex;
+  border-radius: 6px;
+}
+
+.heading-span {
+  font-size: 45px;
+  font-weight: 600;
+  width: 100%;
+  max-height: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.pay-now {
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.information-wrapper {
+  width: 100%;
+}
+
+.trip-details-sum {
+
+}
+
+.trip-headings-spans {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 2%;
+}
+
+.trip--details {
+  margin-top: 3%;
+}
+
+.trip--personal {
+  margin-top: 3%;
+}
+
+.trip--payment {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.span--size {
+  display: inline-block;
+  width: 200px;
+}
+
+.hr-style {
+  margin: 0;
+  margin-top: 5%;
+
+
+}
+
+hr {
+    border-top: 1px solid $orange;
+  }
+
+.make-button-great-again {
+  height: 100px;
+  width: 200px;
+}
+
+.stripe-button {
+  height: 100px;
+  width: 200px;
+  background-color: green;
+}
+
+#stripe-button {
+  height: 100px;
+  width: 200px;
+  background-color: green;
+}
+
+.stripe-button-el { display: none }
+
+.yourcustomclass {
+  width: 150px;
+  height: 50px;
+  background-color: $orange;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  z-index: 1;
+  border-radius: 6px;
+  border: 0px;
+  opacity: 1;
+
+
+  &:hover {
+    transform: scale(1.025, 1.025);
+
+  }
+}
