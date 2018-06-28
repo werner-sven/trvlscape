@@ -15,7 +15,8 @@ function loadDynamicBannerText() {
     const typerOne = new Typed(yourName, {
       strings: ["Your name"],
       typeSpeed: 100,
-      loop: true
+      loop: true,
+      loopCount: 3
     });
     yourName.addEventListener("focus", stopAndClear);
 
