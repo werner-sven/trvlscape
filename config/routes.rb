@@ -17,5 +17,7 @@ Rails.application.routes.draw do
 
   get "/mysurprise", to: "dashboard#surprise", as: "my_surprise"
 
+  get "/coming-soon", to: "pages#coming_soon", as: "coming_soon"
+
 
 end
