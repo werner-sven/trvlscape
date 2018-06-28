@@ -19,7 +19,7 @@
   }
 
   a:hover{
-    color: black;
+    color: $gray;
   }
 }
 
@@ -42,7 +42,7 @@
 }
 
 .active{
-  color: black;
+  color: $gray;
   opacity: 1;
 }
 
