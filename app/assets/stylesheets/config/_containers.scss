@@ -7,6 +7,7 @@
     max-width: 1140px;
     min-height: calc(100vh - 170px)
   }
+
 }
 @media (max-width: 800px) {
   .base-container {
@@ -16,10 +17,13 @@
   img {
     display: none;
   }
+
 }
 
-
-
+#small-base-container{
+ height: 62vh;
+ min-height: calc(62vh - 170px);
+}
 
 
 .base-container--bookings {
