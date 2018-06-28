@@ -19,8 +19,14 @@ class BookingsController < ApplicationController
 
     @booking.match_to_package
 
+    counter = 0
     @booking.number_traveller.times do
+      if counter == 0
+      @booking.new_traveller_first(params["first_name"])
+      else
       @booking.new_traveller
+      end
+      counter += 1
     end
     @booking.user = current_user
     @booking.save
