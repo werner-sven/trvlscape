@@ -13,7 +13,7 @@ const luxusHotel = document.querySelector("#button-luxus-hotel");
 if (slider != null) {
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
-    priceSliderValue.innerHTML = `Budget per person: ${this.value}`;
+    priceSliderValue.innerHTML = `Budget per person: €${this.value}`;
     if (this.value < 200) {
       hostel.checked = true;
       hotel.checked = false;

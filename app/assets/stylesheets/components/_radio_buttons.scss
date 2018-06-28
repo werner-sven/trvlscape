@@ -15,8 +15,6 @@
   // height: 100vh;
 }
 
-
-
 .radio-trip-type-group {
   display: flex;
   flex-wrap: wrap;
@@ -52,6 +50,12 @@
       padding: 1rem;
       transition: transform 300ms ease;
     }
+
+    .radio-title-no-border {
+      border: none;
+      border-radius: 5px;
+    }
+
     .icon svg {
       fill: $orange;
       width: 30px;
@@ -69,6 +73,21 @@
     .radio-button:checked + .radio-title {
       background-color: $orange;
       border: 2px solid $orange;
+      color: white;
+      transform: scale(1.1, 1.1);
+
+      .icon svg {
+        fill: white;
+        background-color: $orange;
+      }
+
+      .radio-title-label {
+        color: white;
+        background-color: $orange;
+      }
+    }
+
+    .radio-button-country:checked + .radio-title {
       color: white;
       transform: scale(1.1, 1.1);
 
