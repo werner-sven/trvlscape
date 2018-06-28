@@ -20,11 +20,15 @@
 
 }
 
-#small-base-container{
+.small-base-container{
  height: 62vh;
  min-height: calc(62vh - 170px);
 }
 
+#small-base-container{
+ height: 62vh;
+ min-height: calc(62vh - 170px);
+}
 
 .base-container--bookings {
   //Change value later
