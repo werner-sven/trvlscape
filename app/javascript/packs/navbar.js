@@ -15,9 +15,9 @@ if (commingSoon != null) {
 
 if (landingPage != null) {
 
+   if (bookNow != null){
   bookNow.hidden = false;
-
-
+  }
 
 window.onscroll = function() {myFunction()};
 
