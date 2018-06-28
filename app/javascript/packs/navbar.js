@@ -1,10 +1,13 @@
 export default function navbar() {
 
 const landingPage = document.querySelector("#banner-surprise-me-button");
-const bookNow = document.querySelector(".booknow");
 const commingSoon = document.querySelector(".coming-soon");
 const logo = document.querySelector(".name-logo");
+
+const bookNow = document.querySelector(".booknow");
+if (bookNow != null){
 bookNow.hidden = true;
+}
 
 if (commingSoon != null) {
   logo.classList.add("navbar-black");
