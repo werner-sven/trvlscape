@@ -73,7 +73,7 @@
     width: 480px;
     position: relative;
     transition: all 5s ease-in-out;
-    color: black;
+    color: $gray;
     font-size:18px;
     border-bottom:solid 1px black;
 
@@ -96,7 +96,7 @@
 
   .span h2 {
    margin-top: 10px;
-   color: black;
+   color: $gray;
    font-family: Tahoma, Arial, sans-serif;
 
   }
@@ -108,10 +108,10 @@
     transition: all 600ms;
     font-size: 35px;
     font-weight: bold;
-    color: black;
+    color: $gray;
   }
   .popup .close:hover {
-    color: black;
+    color: $gray;
   }
   .popup .content {
     max-height: 30%;
@@ -194,7 +194,7 @@
     width: 60%;
     position: relative;
     transition: all 5s ease-in-out;
-    color: black;
+    color: $gray;
     font-size:18px;
     border-bottom:solid 1px black;
 
@@ -218,7 +218,7 @@
 
   .span h2 {
    margin-top: 10px;
-   color: black;
+   color: $gray;
    font-family: Tahoma, Arial, sans-serif;
 
   }
@@ -231,10 +231,10 @@
     font-size: 35px;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: $gray;
   }
   .popup .close:hover {
-    color: black;
+    color: $gray;
   }
   .popup .content {
     max-height: 30%;
