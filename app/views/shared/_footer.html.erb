@@ -1,12 +1,16 @@
 <div class="footer">
   <div class="footer-links">
-    <a href="https://github.com/werner-sven/trvlscape"><i class="fab fa-github"></i></a>
-    <a href="https://www.instagram.com/travelandleisure/"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/travelandleisure/"><i class="fab fa-facebook"></i></a>
-    <a href="https://twitter.com/travelleisure"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.linkedin.com/showcase/travel-leisure/"><i class="fab fa-linkedin"></i></a>
+    <%= link_to "", coming_soon_path, class: "fab fa-instagram" %>
+    <%= link_to "", coming_soon_path, class: "fab fa-facebook" %>
+    <%= link_to "", coming_soon_path, class: "fab fa-twitter" %>
+    <%= link_to "", coming_soon_path, class: "fab fa-linkedin" %>
   </div>
-  <div class="footer-copyright">
-    This footer was made with <i class="fa fa-heart"></i> by the TRVLSCAPE Team
+
+  <div class="footer-links terms-conditions">
+        <%= link_to "Terms and Conditions", coming_soon_path%>
+  </div>
+
+  <div class="footer-links footer-copyright">
+      <%= link_to "TrvlScape", root_path%>
   </div>
 </div>

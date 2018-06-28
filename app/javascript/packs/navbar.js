@@ -16,8 +16,7 @@ if (landingPage != null) {
 
 
 
-
-  window.onscroll = function() {myFunction()};
+window.onscroll = function() {myFunction()};
 
 // Get the navbar
 var navbar = document.querySelector(".navbar-wagon");
