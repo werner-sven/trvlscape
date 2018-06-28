@@ -1,8 +1,15 @@
 export default function navbar() {
 
-const submit = document.querySelector("#banner-surprise-me-button");
+const landingPage = document.querySelector("#banner-surprise-me-button");
+const bookNow = document.querySelector(".booknow");
+bookNow.hidden = true;
 
-if (submit != null) {
+if (landingPage != null) {
+
+  bookNow.hidden = false;
+
+
+
 
   window.onscroll = function() {myFunction()};
 
