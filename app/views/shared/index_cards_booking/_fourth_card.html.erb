@@ -24,7 +24,7 @@
             <div class="type-container">
               <div class="radio-trip-type-group">
                 <div  class="input-container radio-button-preferences">
-                  <input type="radio" name="booking[climate]" class="radio-button" value="warm" <%="checked" if params[:booking] && (params[:booking]["climate"] == "warm") %>>
+                  <input id="warm-weather" type="radio" name="booking[climate]" class="radio-button" value="warm" <%="checked" if params[:booking] && (params[:booking]["climate"] == "warm") %>>
                     <div class="radio-title">
                       <label for="departure_time" class="radio-title-label">Warm</label>
                     </div>
@@ -34,7 +34,7 @@
             <div class="type-container">
               <div class="radio-trip-type-group">
                 <div  class="input-container radio-button-preferences">
-                  <input type="radio" name="booking[climate]" class="radio-button" value="cold" <%="checked" if params[:booking] && (params[:booking]["climate"] == "cold") %>>
+                  <input id="cold-weather" type="radio" name="booking[climate]" class="radio-button" value="cold" <%="checked" if params[:booking] && (params[:booking]["climate"] == "cold") %>>
                     <div class="radio-title">
                       <label for="departure_time" class="radio-title-label">Cold</label>
                     </div>
@@ -44,7 +44,7 @@
             <div class="type-container">
               <div class="radio-trip-type-group">
                 <div  class="input-container radio-button-preferences">
-                  <input type="radio" name="booking[climate]" class="radio-button" value="surprise" <%="checked" if params[:booking] && (params[:booking]["climate"] == "surprise") %>>
+                  <input id="surprise-weather" type="radio" name="booking[climate]" class="radio-button" value="surprise" <%="checked" if params[:booking] && (params[:booking]["climate"] == "surprise") %>>
                     <div class="radio-title">
                       <label for="departure_time" class="radio-title-label">Surprise Me!</label>
                     </div>
