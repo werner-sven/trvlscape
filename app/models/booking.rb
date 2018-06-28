@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
-  validates :origin, presence: true
+  # validates :origin, presence: true
   validates :budget_pp, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 150, less_than_or_equal_to: 1000 }
   validates :climate, presence: true, inclusion: { in: %w(warm cold surprise),
     message: "%{value} is not a valid climate" }
@@ -8,6 +8,7 @@ class Booking < ApplicationRecord
   validates :number_traveller, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 6 }
   validates :start_time, presence: true
   validate :start_time_cannot_be_in_the_past
+
 
   has_many :travellers
   belongs_to :package, required: false
@@ -30,7 +31,7 @@ class Booking < ApplicationRecord
     self.price_cents = ( self.budget_pp * self.number_traveller * 100 )
     self.save
   end
-  
+
   def match_to_package
     packages = Package.all
     if self.climate != "surprise"
@@ -40,9 +41,6 @@ class Booking < ApplicationRecord
       packages = packages.select {|pack| (pack.type_id == self.type_id) }
     end
     self.package = packages.sample
-    self.package.accommodation_type = self.accommodation_type
-    self.package.start_date = self.start_time
-    self.package.save
   end
 
 

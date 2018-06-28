@@ -10,8 +10,10 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Book Now!", "bookings/new", class: "navbar-wagon-item navbar-wagon-link" %>
 
+      <div class="booknow">
+          <%= link_to "Book Now!", "bookings/new", class: "navbar-wagon-item navbar-wagon-link" %>
+      </div>
 
       <!-- Avatar with dropdown menu -->
      <div class="navbar-wagon-item">

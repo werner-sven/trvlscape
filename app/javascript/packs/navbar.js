@@ -1,15 +1,29 @@
 export default function navbar() {
 
-const submit = document.querySelector("#banner-surprise-me-button");
+const landingPage = document.querySelector("#banner-surprise-me-button");
+const commingSoon = document.querySelector(".coming-soon");
+const logo = document.querySelector(".name-logo");
 
-if (submit != null) {
+const bookNow = document.querySelector(".booknow");
+if (bookNow != null){
+bookNow.hidden = true;
+}
 
-  window.onscroll = function() {myFunction()};
+if (commingSoon != null) {
+  logo.classList.add("navbar-black");
+}
+
+if (landingPage != null) {
+
+  bookNow.hidden = false;
+
+
+
+window.onscroll = function() {myFunction()};
 
 // Get the navbar
 var navbar = document.querySelector(".navbar-wagon");
 const banner = document.querySelector(".banner-landing-page");
-const logo = document.querySelector(".name-logo");
 const book = document.querySelector(".navbar-wagon-item");
 const hiw = document.querySelector(".hiw");
 

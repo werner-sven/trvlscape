@@ -1,0 +1,27 @@
+.coming-soon{
+
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+  h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+    font-weight: 700;
+    color: $orange;
+  }
+
+
+  .coming-soon-gif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
