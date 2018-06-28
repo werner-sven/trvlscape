@@ -23,6 +23,8 @@ if (numberTravellers.value === "1") {
   console.log("2");
 } else if (numberTravellers.value === "3") {
   console.log("3");
+} else {
+  console.log("group");
 }
 }
 
