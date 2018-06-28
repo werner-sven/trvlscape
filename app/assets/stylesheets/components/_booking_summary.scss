@@ -21,7 +21,7 @@
     span {
       font-size: 60px;
       font-weight: 700;
-      color: black;
+      color: $snowwhite;
     }
 
 
@@ -56,7 +56,7 @@
     padding-right: 15px;
 
     .container-summary-content{
-      background-color: white;
+      background-color: $snowwhite;
       padding: 2% 2%;
       height: 100%;
       width: auto;
@@ -65,7 +65,7 @@
 
       .style-heading{
         margin-top: 15px;
-        color:black;
+        color: $gray;
         font-weight:bold;
         font-size:30px;
 
@@ -80,7 +80,7 @@
         #traveller_info{
          font-size:25px;
          font-weight: 500;
-         color: black;
+         color: $gray;
          width: 40%;
           display: inline-block;
          }
@@ -112,7 +112,7 @@
       line-height:40px;
 
       .container-summary-content{
-      background-color: white;
+      background-color: $snowwhite;
       padding: 2% 2%;
       height: 100%;
       width: 100%;
@@ -124,7 +124,7 @@
           margin-top: 15px;
           font-size: 30px;
           font-weight: 500;
-          color: black;
+          color: $gray;
           font-weight:bolder;
         }
 
@@ -137,7 +137,7 @@
             font-size:25px;
             font-weight: 500;
             line-height:40px;
-            color: black;
+            color: $gray;
             width: 40%;
              display: inline-block;
           }
@@ -156,7 +156,7 @@
             font-size:25px;
             font-weight: 500;
             line-height:40px;
-            color: black;
+            color: $gray;
             width: 40%;
              display: inline-block;
           }
@@ -181,7 +181,7 @@
       padding-right: 15px;
 
       .container-summary-content{
-      background-color: white;
+      background-color: $snowwhite;
       padding: 2% 2%;
       height: 100%;
       width: 100%;
@@ -194,7 +194,7 @@
         span {
           font-size: 30px;
           font-weight: 500;
-          color: black;
+          color: $gray;
           font-weight:bolder;
           line-height: 45px;
         }
@@ -207,7 +207,7 @@
             font-size:25px;
             font-weight: 500;
             line-height:40px;
-            color: black;
+            color: $gray;
             width: 40%;
              display: inline-block;
           }
@@ -220,7 +220,7 @@
 
        .style-amount{
             font-size:22px;
-            color:black;
+            color:$gray;
             margin-left:430px;
             font-weight:bolder;
 
@@ -232,7 +232,7 @@
           span{
             font-size:18px;
             font-weight: 500;
-            color: grey;
+            color: $gray;
             line-height: 45px;
 
 
