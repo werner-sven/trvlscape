@@ -78,17 +78,50 @@ if (numberTravellers.value === "1") {
 }
 
 function setSun() {
-  console.log("sun")
+  removeCloud();
+  removeQuestionMark();
+  grid2[0].classList.add("sun");
+  grid2[1].classList.add("sun");
+  grid2[2].classList.add("sun");
+
 }
 
 function setCloud() {
-  console.log("cloud")
+  removeSun();
+  removeQuestionMark();
+  grid2[0].classList.add("cloud");
+  grid2[1].classList.add("cloud");
+  grid2[2].classList.add("cloud");
+
 }
 
 function setQuestionMark() {
-  console.log("?")
+  removeSun();
+  removeCloud();
+  grid2[0].classList.add("question-mark");
+  grid2[1].classList.add("question-mark");
+  grid2[2].classList.add("question-mark");
+
 }
 
+}
+
+function removeSun() {
+  grid2[0].classList.remove("sun");
+  grid2[1].classList.remove("sun");
+  grid2[2].classList.remove("sun");
+}
+
+function removeCloud() {
+  grid2[0].classList.remove("cloud");
+  grid2[1].classList.remove("cloud");
+  grid2[2].classList.remove("cloud");
+}
+
+function removeQuestionMark() {
+  grid2[0].classList.remove("question-mark");
+  grid2[1].classList.remove("question-mark");
+  grid2[2].classList.remove("question-mark");
 }
 
 function removeOne(){
