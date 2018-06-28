@@ -1,27 +1,48 @@
 .sun {
-   background-color: yellow;
+   background-image:image-url("sun.svg");
+   -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
 }
 
 .cloud {
-  background-color: dodgerblue;
+  background-image:image-url("sun_clouds.svg");
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
 }
 
 .question-mark {
-  background-color: seagreen;
+  background-image:image-url("question-mark.svg");
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
 }
 
 .one-person {
-  background-color: $orange;
+  background-image:image-url("traveler-with-a-suitcase.svg");
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
 }
 
 .two-persons {
-  background-color: $blue;
+  background-image:image-url("traveler-with-a-suitcase.svg");
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
 }
 
 .three-persons {
-  background-color: $purple;
+  background-image:image-url("traveler-with-a-suitcase.svg");
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
 }
 
 .many-persons {
-  background-color: $gray;
+  background-image:image-url("users-group.svg");
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
 }
