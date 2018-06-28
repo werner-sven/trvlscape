@@ -54,7 +54,9 @@
                      </select>
                    </div>
 
-                     <input id="first_name"type="text" name='traveller_<%=i%>[first_name]' placeholder="First Name" class="input-style input-style:focus" >
+                     <input id="first_name"type="text" name='traveller_<%=i%>[first_name]' placeholder="First Name" value='<%= if i == 0
+                      @booking.travellers.first.first_name
+                      end %>' class="input-style input-style:focus" >
                         </div>
                         <input id="" type="text" name='traveller_<%=i%>[passport_number]' placeholder="Passport Number" class="input-style input-style:focus" >
 

@@ -27,6 +27,13 @@ class Booking < ApplicationRecord
     traveller.save
   end
 
+  def new_traveller_first(name)
+    traveller = Traveller.new(first_name: name)
+    traveller.booking = self
+    traveller.save
+  end
+
+
   def set_price
     self.price_cents = ( self.budget_pp * self.number_traveller * 100 )
     self.save

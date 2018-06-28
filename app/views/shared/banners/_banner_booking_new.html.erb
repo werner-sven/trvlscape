@@ -1,8 +1,17 @@
 <div class="banner-booking">
   <div class="image-booking">
     <div class="banner-content-booking">
-
-      <span>5 minutes to book your surprise trip!</span>
+      <span style="font-size: 71px;">Hey <%= if @booking.id == nil
+       params["name"]
+        else
+       @booking.travellers.first.first_name
+       end %>,</span>
+      <br>
+      <span>only <%= if @booking.id == nil
+        "5 minutes"
+      else
+        "2 minutes more"
+        end%> to book your surprise trip!</span>
     </div>
   </div>
 </div>
