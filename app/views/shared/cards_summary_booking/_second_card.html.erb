@@ -3,8 +3,9 @@
     <div class="style-heading"> <span>Personal Details </span> </div>
       <div class="style-body">
 
-        <span>Name: Add User Fırst and Last Name later </span><br>
-        <span>Email: <%= current_user.email %> </span><br>
+        <span id="traveller_info"=>Name: </span> <span id="user_info" </span><br>
+        <span id="traveller_info"=>Email: </span> <span id="user_info"=><%= current_user.email %> </span><br>
+
 <!--         <div class="dropdown">
          <span>Traveller Details</span>
          <select name="" id="">
@@ -32,10 +33,12 @@
                 <div class="popup">
                  <span class="center-heading">TRAVELLER DETAILS </span>
                  <a class="close" href="#modal-anchor">&times;</a>
-                 <p>Name:   <%= traveller.first_name + ' ' + traveller.last_name %></p>
-                 <p>Birtday:   <%= traveller.birth_date %></p>
-                 <p>Passport Number:    <%= traveller.passport_number %></p>
-                 <p>Nationality:   <%= traveller.nationality %></p>
+                 <span  id="traveller_info"=>Name:</span>  <span id="user_info"=><%= traveller.first_name + ' ' + traveller.last_name %></span>
+                 <span  id="traveller_info"=>Birthday:</span> <span id="user_info"=><%= traveller.birth_date %></span>
+                 <span id="traveller_info"=>Passport Number: </span>  <span id="user_info"=><%= traveller.passport_number %></span>
+                 <span id="traveller_info"=> Nationality: </span> <span id="user_info"=><%= traveller.nationality %></span>
+                 <span id="traveller_info"=>Expiry Date:</span>   <span id="user_info"=><%= traveller.passport_expiration %></span>
+                 <span id="traveller_info"=>Phone Number: </span> <span id="user_info"=><%= traveller.passport_expiration %></span>
                 </div>
               </div>
             <% end %>

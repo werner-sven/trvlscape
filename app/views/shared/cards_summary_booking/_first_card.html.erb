@@ -2,13 +2,15 @@
   <div class="container-summary-content">
     <div class="style-heading"> <span>Trip Details</span> </div>
       <div class="style-body">
-      <span>Number of Travellers: <%= booking.number_traveller  %> </span><br>
-      <span>Origin: <%= booking.origin %></span><br>
-      <span>Depature:  <%= booking.start_time.strftime("%d.%m.%Y")%>  after <%= booking.start_time.strftime("%l %p")%> </span><br>
-      <span>Climate: <%= booking.climate %> </span><br>
-      <span>Accomodation type: <%= booking.accommodation_type %> </span><br>
-      <span>Excluded countries: <%= booking.excluded_countries %></span><br>
-    </div>
+      <span id="traveller_info"=>Number of Travellers: </span> <span id="user_info"=> <%= booking.number_traveller  %>  </span>
+     <br>
+
+      <span id="traveller_info"=>Origin:</span> <span class="text-left" id="user_info"=> <%= booking.origin %></span><br>
+      <span id="traveller_info"=>Departure:</span> <span  class="text-left" id="user_info"=> <%= booking.start_time.strftime("%d.%m.%Y")%>  after <%= booking.start_time.strftime("%l %p")%> </span><br>
+      <span id="traveller_info"=>Climate:</span> <span class="text-left"  id="user_info"=><%= booking.climate %> </span><br>
+      <span id="traveller_info" =>Accomodation type:</span> <span class="text-left" id="user_info"=> <%= booking.accommodation_type %> </span><br>
+      <span id="traveller_info"=>Excluded countries:</span> <span class="text-left" id="user_info"=><%= booking.excluded_countries %></span><br>
+     </div>
 
   </div>
 </div>

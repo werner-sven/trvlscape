@@ -32,12 +32,12 @@
     grid-column: 1 / span 2;
     // display: flex;
     // justify-content: center;
-    // align-items: center;
+     align-items: center;
     // background-color: blue;
     background-image: image-url("street.jpg");
     background-size: cover !important;
     height: 100%;
-    width: 100%;
+    width: 156%;
   }
 
   .image-summary-booking {
@@ -59,36 +59,45 @@
       background-color: white;
       padding: 2% 2%;
       height: 100%;
-      width: 100%;
+      width: auto;
+      overflow:hidden;
+
 
       .style-heading{
+        margin-top: 15px;
+        color:black;
+        font-weight:bold;
+        font-size:30px;
 
-        span {
-          font-size: 30px;
-          font-weight: 500;
-          color: black;
-          font-weight:bolder;
-        }
+
 
       }
 
       .style-body{
 
-        span{
-          font-size:18px;
-          font-weight: 500;
-          color: $gray;
-        }
 
-        .style-body-booking{
 
-          span{
-            font-size:18px;
-            font-weight: 500;
-            color: $light-gray;
-          }
-        }
+        #traveller_info{
+         font-size:25px;
+         font-weight: 500;
+         color: black;
+         width: 40%;
+          display: inline-block;
+         }
+
+        #user_info{
+
+         color:$gray;
+         font-size:25px;
+         line-height:40px;
+
+
+
       }
+    }
+
+
+
     }
   }
 
@@ -100,6 +109,7 @@
       padding-top: 15px;
       padding-bottom: 15px;
       padding-right: 15px;
+      line-height:40px;
 
       .container-summary-content{
       background-color: white;
@@ -108,8 +118,10 @@
       width: 100%;
 
       .style-heading{
+        margin-top: 15px;
 
         span {
+          margin-top: 15px;
           font-size: 30px;
           font-weight: 500;
           color: black;
@@ -120,21 +132,43 @@
 
       .style-body{
 
-        span{
-          font-size:18px;
-          font-weight: 500;
-          color: $gray;
-        }
+
+          #traveller_info{
+            font-size:25px;
+            font-weight: 500;
+            line-height:40px;
+            color: black;
+            width: 40%;
+             display: inline-block;
+          }
+
+           #user_info{
+            font-size:25px;
+            color:$gray;
+            font-weight: 500;
+          }
+          }
+
 
         .style-body-booking{
 
-          span{
-            font-size:18px;
+            #traveller_info{
+            font-size:25px;
             font-weight: 500;
-            color: $light-gray;
+            line-height:40px;
+            color: black;
+            width: 40%;
+             display: inline-block;
           }
+
+            #user_info{
+              color:red;
+              font-size:25px;
+              font-weight:500;
+              line-height:40px;
+            }
         }
-      }
+
     }
   }
 
@@ -151,32 +185,60 @@
       padding: 2% 2%;
       height: 100%;
       width: 100%;
+      color: $gray;
+      line-height:35px;
 
       .style-heading{
+        margin-top: 15px;
 
         span {
           font-size: 30px;
           font-weight: 500;
           color: black;
           font-weight:bolder;
+          line-height: 45px;
         }
 
       }
 
       .style-body{
 
-        span{
-          font-size:18px;
-          font-weight: 500;
-          color: $gray;
-        }
+          #traveller_info{
+            font-size:25px;
+            font-weight: 500;
+            line-height:40px;
+            color: black;
+            width: 40%;
+             display: inline-block;
+          }
+          #user_info{
+            color:$gray;
+            font-size:25px;
+
+          }
+
+
+       .style-amount{
+            font-size:22px;
+            color:black;
+            margin-left:430px;
+            font-weight:bolder;
+
+            }
+
 
         .style-body-booking{
 
           span{
             font-size:18px;
             font-weight: 500;
-            color: $light-gray;
+            color: grey;
+            line-height: 45px;
+
+
+
+
+
           }
         }
       }
