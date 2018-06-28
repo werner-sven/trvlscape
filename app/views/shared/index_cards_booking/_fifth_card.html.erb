@@ -1,4 +1,4 @@
-<div class="base-container">
+<div class="base-container small-base-container">
   <div class="base-container--bookings height-70vh">
     <div class="card-booking-process">
       <div class="index-number index-number-booking-new" id="fith-step">
@@ -10,6 +10,26 @@
       <div class="content-container grid-budget">
         <div class="grid-content-left-budget">
           <div class="image-container-people-counter">
+            <div class="grid-people-counter">
+              <div class="grid-element-sun">
+                <h1>hi</h1>
+              </div>
+              <div class="grid-element-2">
+                <h1>hi</h1>
+              </div>
+              <div class="grid-element-3">
+                <h1>hi</h1>
+              </div>
+              <div class="grid-element-4">
+                <h1>hi</h1>
+              </div>
+              <div class="grid-element-5">
+                <h1>hi</h1>
+              </div>
+              <div class="grid-element-6">
+                <h1>hi</h1>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -19,7 +39,7 @@
 
         <div class="slidecontainer padding-right-10 padding-left-10 form-grouped grid-budget-slider">
           <label class="slider-output slider-heading" for="max-price">
-            Budget per person: <%= if (params[:budget_pp])
+            Budget per person: €<%= if (params[:budget_pp])
                           then "#{params[:budget_pp]}"
                         else
                           "300"
@@ -27,9 +47,9 @@
           </label>
           <input name="budget_pp" type="range" min="150" max="1000"  class="slider" id="myRange"
                     <%= if (params[:budget_pp])
-                          then "value=#{params[:budget_pp]}"
+                          then "€ value=#{params[:budget_pp]}"
                         else
-                          "value=300"
+                          "€ value=300"
                           end%>
                >
         </div>

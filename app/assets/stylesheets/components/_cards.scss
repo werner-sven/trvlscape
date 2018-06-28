@@ -251,6 +251,7 @@ margin-top: 12vh;
    padding-top: 217px;
    font-weight:bolder;
    color: #FFFFFF;
+  }
 
 }
 
@@ -263,7 +264,6 @@ margin-top: 12vh;
 .card-description--red{
   height:500px;
 }
-  }
   .card-description--yellow:hover:after {
   content: attr(data-hover);
   font-size: 18px;
@@ -345,7 +345,8 @@ margin-top: 12vh;
 .counter-container {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 63%;
+  margin-left: 13px;
 }
 
 .text-container {
@@ -396,17 +397,108 @@ margin-top: 12vh;
     width: 100%;
   }
 
+// Booking new second card
+
+.content-container-grid--card-2 {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .grid-element-1 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    display: flex;
+    // justify-content: bottom;
+    // align-items: right;
+    background-color: red;
+  }
+
+  .grid-element-1-2 {
+
+  }
+
+  .grid-element-2 {
+
+  }
+
+  .grid-element-2-2 {
+
+  }
+
+  .grid-element-3 {
+
+  }
+
+  .grid-element-3-2 {
+
+  }
+
+// Booking new third card
+
   .image-container-people-counter {
-    height: 90%;
-    width: 60%;
-    background-image: image-url("people_group.jpg");
-    background-size: cover !important;
-    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+
+    .grid-people-counter {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr
+    }
+
+    .grid-element-sun {
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .grid-element-2 {
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid-element-3 {
+      grid-row: 1 / span 1;
+      grid-column: 3 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid-element-4 {
+      grid-row: 3 / span 1;
+      grid-column: 1 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid-element-5 {
+      grid-row: 3 / span 1;
+      grid-column: 2 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid-element-6 {
+      grid-row: 3 / span 1;
+      grid-column: 3 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .content-container--grid {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 35% 65%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   }
 
@@ -445,7 +537,7 @@ margin-top: 12vh;
   .grid-preferences {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 40%;
-    grid-template-columns: 40% 1fr 1fr;
+    grid-template-columns: 35% 1fr 1fr;
   }
 
   .grid-preferences-left {
@@ -476,7 +568,7 @@ margin-top: 12vh;
     display: flex;
     justify-content: center;
     align-items: left;
-    padding-left: 10%;
+    padding-left: 12%;
   }
 
   .grid-heading-preferences-second-right {
@@ -500,6 +592,14 @@ margin-top: 12vh;
     justify-content: left;
     align-items: center;
     padding-left: 15%;
+  }
+
+  .grid-pop-up-last {
+    grid-row: 4 / span 1;
+    grid-column: 3 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_25_104701) do
+ActiveRecord::Schema.define(version: 2018_06_26_160444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,10 @@ ActiveRecord::Schema.define(version: 2018_06_25_104701) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price_cents", default: 0, null: false
+    t.string "lat"
+    t.string "long"
+    t.bigint "type_id"
+    t.index ["type_id"], name: "index_packages_on_type_id"
   end
 
   create_table "travellers", force: :cascade do |t|
@@ -115,6 +119,7 @@ ActiveRecord::Schema.define(version: 2018_06_25_104701) do
   add_foreign_key "bookings", "users"
   add_foreign_key "package_origins", "origins"
   add_foreign_key "package_origins", "packages"
+  add_foreign_key "packages", "types"
   add_foreign_key "travellers", "bookings"
   add_foreign_key "users", "travellers"
 end

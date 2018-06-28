@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :payments, only: [:new, :create]
   end
 
-  get "/mysurprise", to: "dashboard#surprise", as: "my_surprise"
+  get "/coming-soon", to: "pages#coming_soon", as: "coming_soon"
 
 
 end

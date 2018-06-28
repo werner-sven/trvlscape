@@ -3,16 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <title>TrvlScape - Book your trip to a destination unknown</title>
-    <meta name="description" content="Be curious. Be adventerous. Book a surprise trip with TrvlScape in 5 minutes. Your relax until take-off, TrvlScape takes care of the organization.">
+    <meta name="description" content="<%= meta_description %>">
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
+
+    <!-- Twitter Card data -->
+
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_pack_tag 'application' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+    <%= render 'shared/navbar' %>
     <%= yield %>
     <%= render 'shared/footer' %>
 
@@ -21,5 +34,7 @@
     <%= javascript_pack_tag 'banner' %>
     <%= javascript_pack_tag 'counter' %>
     <%= javascript_pack_tag 'confirmation' %>
+    <%= javascript_pack_tag 'changing_pictures_booking' %>
+
   </body>
 </html>

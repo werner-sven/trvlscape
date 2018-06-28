@@ -22,11 +22,17 @@
 
 .booking-step6-personal-header{
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
+    margin-bottom: 5%;
+
 
     h3{
-      margin-top: 1%;
+      margin: 0;
+    }
+
+    p{
+      margin: 0;
     }
 
 }
@@ -49,7 +55,8 @@
   }
 
   #title{
-    width: 15%;
+    width: 110%;
+    height: 39px;
   }
 
   #first_name{
@@ -126,4 +133,12 @@
 
 .inline{
   display: flex;
+  justify-content: space-between;
+}
+
+.drop-down-titles {
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 2px;
+  color: $gray;
 }

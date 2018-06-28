@@ -11,6 +11,28 @@
       <div class="content-container grid-preferences">
         <div class="grid-preferences-left">
           <div class="image-container-people-counter">
+            <div class="image-container-people-counter">
+            <div class="grid-people-counter">
+              <div class="grid-element-sun">
+                <h1>hi</h1>
+              </div>
+              <div class="grid-element-2">
+                <h1>hi</h1>
+              </div>
+              <div class="grid-element-3">
+                <h1>hi</h1>
+              </div>
+              <div class="grid-element-4">
+                <h1>hi</h1>
+              </div>
+              <div class="grid-element-5">
+                <h1>hi</h1>
+              </div>
+              <div class="grid-element-6">
+                <h1>hi</h1>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
 
@@ -24,7 +46,7 @@
             <div class="type-container">
               <div class="radio-trip-type-group">
                 <div  class="input-container radio-button-preferences">
-                  <input type="radio" name="booking[climate]" class="radio-button" value="warm" <%="checked" if params[:booking] && (params[:booking]["climate"] == "warm") %>>
+                  <input id="warm-weather" type="radio" name="booking[climate]" class="radio-button" value="warm" <%="checked" if params[:booking] && (params[:booking]["climate"] == "warm") %>>
                     <div class="radio-title">
                       <label for="departure_time" class="radio-title-label">Warm</label>
                     </div>
@@ -34,7 +56,7 @@
             <div class="type-container">
               <div class="radio-trip-type-group">
                 <div  class="input-container radio-button-preferences">
-                  <input type="radio" name="booking[climate]" class="radio-button" value="cold" <%="checked" if params[:booking] && (params[:booking]["climate"] == "cold") %>>
+                  <input id="cold-weather" type="radio" name="booking[climate]" class="radio-button" value="cold" <%="checked" if params[:booking] && (params[:booking]["climate"] == "cold") %>>
                     <div class="radio-title">
                       <label for="departure_time" class="radio-title-label">Cold</label>
                     </div>
@@ -44,7 +66,7 @@
             <div class="type-container">
               <div class="radio-trip-type-group">
                 <div  class="input-container radio-button-preferences">
-                  <input type="radio" name="booking[climate]" class="radio-button" value="surprise" <%="checked" if params[:booking] && (params[:booking]["climate"] == "surprise") %>>
+                  <input id="surprise-weather" type="radio" name="booking[climate]" class="radio-button" value="surprise" <%="checked" if params[:booking] && (params[:booking]["climate"] == "surprise") %>>
                     <div class="radio-title">
                       <label for="departure_time" class="radio-title-label">Surprise Me!</label>
                     </div>
@@ -60,8 +82,9 @@
 
         <div class="grid-heading-preferences-last-right">
           <span>Frequent traveller?</span>
-
-          <div class="popup-container">
+        </div>
+        <div class="grid-pop-up-last">
+          <div class="popup-container-country">
             <div class="box">
               <a class="button" href="#popup1">Let me Pop up</a>
             </div>
@@ -71,15 +94,15 @@
                 <span class="center-heading">Which countries do you wish to exclude?</span>
                 <a class="close" href="#modal-anchor">&times;</a>
                 <div class="content">
-                  <div class="radio-container">
+                  <div class="radio-container" style="color: white; font-weight: 500px; font-size: 20px; font-border: black;">
                     <div class="row">
                       <div class="col-xs-3">
                         <div class="type-container">
                           <div class="radio-trip-type-group">
-                            <div  class="input-container radio-button-countries">
-                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="France">
-                              <div class="radio-title">
-                                <label for="departure_time" class="radio-title-label">France</label>
+                            <div  class="input-container radio-button-countries radio-button-country" style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('germany.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Germany">
+                              <div class="radio-title radio-title-no-border">
+                                <label for="departure_time" class="radio-title-label">Germany</label>
                               </div>
                           </div>
                           </div>
@@ -88,9 +111,9 @@
                       <div class="col-xs-3">
                         <div class="type-container">
                           <div class="radio-trip-type-group">
-                            <div  class="input-container radio-button-countries">
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('france.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
                               <input type="radio" name="booking[excluded_countries]" class="radio-button" value="France">
-                                <div class="radio-title">
+                                <div class="radio-title radio-title-no-border">
                                   <label for="departure_time" class="radio-title-label">France</label>
                                 </div>
                             </div>
@@ -100,10 +123,10 @@
                       <div class="col-xs-3">
                         <div class="type-container">
                           <div class="radio-trip-type-group">
-                            <div  class="input-container radio-button-countries">
-                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="France">
-                                <div class="radio-title">
-                                  <label for="departure_time" class="radio-title-label">France</label>
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('austria.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Austria">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Austria</label>
                                 </div>
                             </div>
                           </div>
@@ -112,10 +135,10 @@
                       <div class="col-xs-3">
                         <div class="type-container">
                           <div class="radio-trip-type-group">
-                            <div  class="input-container radio-button-countries">
-                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="France">
-                                <div class="radio-title">
-                                  <label for="departure_time" class="radio-title-label">France</label>
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('belgium.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Belgium">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Belgium</label>
                                 </div>
                             </div>
                           </div>
@@ -124,10 +147,10 @@
                       <div class="col-xs-3">
                         <div class="type-container">
                           <div class="radio-trip-type-group">
-                            <div  class="input-container radio-button-countries">
-                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="France">
-                                <div class="radio-title">
-                                  <label for="departure_time" class="radio-title-label">France</label>
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('croatia.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Croatia">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Croatia</label>
                                 </div>
                             </div>
                           </div>
@@ -136,10 +159,10 @@
                       <div class="col-xs-3">
                         <div class="type-container">
                           <div class="radio-trip-type-group">
-                            <div  class="input-container radio-button-countries">
-                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="France">
-                                <div class="radio-title">
-                                  <label for="departure_time" class="radio-title-label">France</label>
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('ireland.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Ireland">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Ireland</label>
                                 </div>
                             </div>
                           </div>
@@ -148,10 +171,10 @@
                       <div class="col-xs-3">
                         <div class="type-container">
                           <div class="radio-trip-type-group">
-                            <div  class="input-container radio-button-countries">
-                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="France">
-                                <div class="radio-title">
-                                  <label for="departure_time" class="radio-title-label">France</label>
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('italy.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Italy">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Italy</label>
                                 </div>
                             </div>
                           </div>
@@ -160,10 +183,10 @@
                       <div class="col-xs-3">
                         <div class="type-container">
                           <div class="radio-trip-type-group">
-                            <div  class="input-container radio-button-countries">
-                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="France">
-                                <div class="radio-title">
-                                  <label for="departure_time" class="radio-title-label">France</label>
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('morocco.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Morocco">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Morocco</label>
                                 </div>
                             </div>
                           </div>
@@ -172,10 +195,10 @@
                       <div class="col-xs-3">
                         <div class="type-container">
                           <div class="radio-trip-type-group">
-                            <div  class="input-container radio-button-countries">
-                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="France">
-                                <div class="radio-title">
-                                  <label for="departure_time" class="radio-title-label">France</label>
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('netherlands.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Netherlands">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Netherlands</label>
                                 </div>
                             </div>
                           </div>
@@ -184,10 +207,10 @@
                       <div class="col-xs-3">
                         <div class="type-container">
                           <div class="radio-trip-type-group">
-                            <div  class="input-container radio-button-countries">
-                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="France">
-                                <div class="radio-title">
-                                  <label for="departure_time" class="radio-title-label">France</label>
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('poland.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Poland">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Poland</label>
                                 </div>
                             </div>
                           </div>
@@ -196,10 +219,10 @@
                       <div class="col-xs-3">
                         <div class="type-container">
                           <div class="radio-trip-type-group">
-                            <div  class="input-container radio-button-countries">
-                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="France">
-                                <div class="radio-title">
-                                  <label for="departure_time" class="radio-title-label">France</label>
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('portugal.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Portugal">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Portugal</label>
                                 </div>
                             </div>
                           </div>
@@ -208,10 +231,58 @@
                       <div class="col-xs-3">
                         <div class="type-container">
                           <div class="radio-trip-type-group">
-                            <div  class="input-container radio-button-countries">
-                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="France">
-                                <div class="radio-title">
-                                  <label for="departure_time" class="radio-title-label">France</label>
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('spain.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Spain">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Spain</label>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="type-container">
+                          <div class="radio-trip-type-group">
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('turkey.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Turkey">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Turkey</label>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="type-container">
+                          <div class="radio-trip-type-group">
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('united-kingdom.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="UK">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">UK</label>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="type-container">
+                          <div class="radio-trip-type-group">
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('switzerland.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Switzerland">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Switzerland</label>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="type-container">
+                          <div class="radio-trip-type-group">
+                            <div  class="input-container radio-button-countries " style="background-image: linear-gradient(-225deg, rgba(30,30,30,0.4) 0%, rgba(30,30,30,0.1) 50%), url(<%= image_path('denmark.png') %>); background-size: cover !important;background-position: center; border-radius: 5px;">
+                              <input type="radio" name="booking[excluded_countries]" class="radio-button" value="Denmark">
+                                <div class="radio-title radio-title-no-border">
+                                  <label for="departure_time" class="radio-title-label">Denmark</label>
                                 </div>
                             </div>
                           </div>
