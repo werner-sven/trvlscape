@@ -132,10 +132,22 @@
     font-weight: 700;
     color: white;
   }
-  .image-booking {
+  .image-booking1 {
     height: 100%;
     width: 100%;
-    background-image: image-url("banner_small.jpg");
+    background-image: image-url("banner1.jpg");
+    background-size: cover !important;
+    background-position: center;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-booking2 {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(-225deg, rgba(30,30,30,0.3) 0%, rgba(30,30,30,0.3) 50%), image-url("banner2.jpg");
     background-size: cover !important;
     background-position: center;
     border-radius: 3px;
