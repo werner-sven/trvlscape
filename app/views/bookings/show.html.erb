@@ -25,6 +25,9 @@
           <span id="traveller_info" style="display: inline-block; width: 200px;">Climate:</span>
             <span class="text-left"  id="user_info"=><%= @booking.climate %> </span><br>
 
+          <span id="traveller_info" style="display: inline-block; width: 200px;">Type:</span>
+          <span class="text-left"  id="user_info"=><%= @booking.type.name %> </span><br>
+
           <span id="traveller_info" style="display: inline-block; width: 200px;">Accomodation type:</span>
             <span class="text-left" id="user_info"=> <%= @booking.accommodation_type %> </span><br>
 
@@ -44,7 +47,7 @@
 
           <span id="traveller_info" style="display: inline-block; width: 200px;">Email: </span>
             <span id="user_info"=><%= current_user.email %> </span><br>
-          <span id="traveller_info" style="display: inline-block; width: 200px;">Email: </span>
+          <span id="traveller_info" style="display: inline-block; width: 200px;">Phone: </span>
             <span id="user_info"=><%= current_user.phone %> </span><br>
           <div class="popup-container flex">
             <div class="row">
@@ -86,7 +89,7 @@
           <span id="traveller_info" style="display: inline-block; width: 200px;">Number of Travellers: </span>
             <span id="user_info"=> <%= @booking.number_traveller %></span><br>
 
-          <span  style="display: inline-block; width: 200px;"> TOTAL AMOUNT: </span> <span><%= humanized_money_with_symbol(@booking.price) %> </span><br>
+          <span  style="display: inline-block; width: 200px;"> Total Amount: </span> <span><%= humanized_money_with_symbol(@booking.price) %> </span><br>
         </div>
       </div>
 
