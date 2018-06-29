@@ -3,11 +3,19 @@ export default function navbar() {
 const landingPage = document.querySelector("#banner-surprise-me-button");
 const commingSoon = document.querySelector(".coming-soon");
 const logo = document.querySelector(".name-logo");
-
+var navbar = document.querySelector(".navbar-wagon");
+const footer = document.querySelector(".footer");
+const confirmation = document.querySelector(".confirmation");
 const bookNow = document.querySelector(".booknow");
+
+if (confirmation != null){
+footer.style.display = "none";
+}
+
 if (bookNow != null){
 bookNow.hidden = true;
 }
+
 
 if (commingSoon != null) {
   logo.classList.add("navbar-black");
