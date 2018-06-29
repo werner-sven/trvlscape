@@ -98,7 +98,12 @@
             data-email="<%= current_user.email %>"
             data-amount="<%= @booking.price_cents %>"
             data-currency= eur ></script>
-            <button type="submit" class="yourcustomclass">Pay Now</button>
+            <script>
+        // Hide default stripe button, be careful there if you
+        // have more than 1 button of that class
+        document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+    </script>
+            <button type="submit" class="yourcustomclass margin-top--pay">Pay Now</button>
         <% end %>
       </div>
 
